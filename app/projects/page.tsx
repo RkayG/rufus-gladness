@@ -20,6 +20,7 @@ const allProjects: Project[] = [
     category: "Blockchain",
     liveDemoUrl: "#",
     githubUrl: "#",
+    slug: "defi-trading-platform",
   },
   {
     id: "2",
@@ -33,6 +34,7 @@ const allProjects: Project[] = [
     category: "Blockchain",
     liveDemoUrl: "#",
     githubUrl: "#",
+    slug: "nft-marketplace",
   },
   {
     id: "3",
@@ -46,6 +48,7 @@ const allProjects: Project[] = [
     category: "Web App",
     liveDemoUrl: "#",
     githubUrl: "#",
+    slug: "e-commerce-platform",
   },
   {
     id: "4",
@@ -59,6 +62,7 @@ const allProjects: Project[] = [
     category: "Mobile App",
     liveDemoUrl: "#",
     githubUrl: "#",
+    slug: "task-management-app",
   },
   {
     id: "5",
@@ -72,6 +76,7 @@ const allProjects: Project[] = [
     category: "Web App",
     liveDemoUrl: "#",
     githubUrl: "#",
+    slug: "personal-blog-engine",
   },
   {
     id: "6",
@@ -85,6 +90,7 @@ const allProjects: Project[] = [
     category: "Blockchain",
     liveDemoUrl: "#",
     githubUrl: "#",
+    slug: "supply-chain-dapp",
   },
 ];
 

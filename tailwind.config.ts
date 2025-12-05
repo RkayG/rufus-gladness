@@ -13,6 +13,7 @@ const config: Config = {
         display: ["var(--font-display)", "Space Grotesk", "sans-serif"],
         handwriting: ["var(--font-handwriting)", "Kalam", "cursive"],
         caveat: ["var(--font-caveat)", "Caveat", "cursive"],
+        body: ["var(--font-body)", "Inter", "sans-serif"],
       },
     },
   },

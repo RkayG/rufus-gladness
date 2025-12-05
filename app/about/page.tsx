@@ -107,6 +107,7 @@ const featuredProjects: Project[] = [
     category: "Blockchain",
     liveDemoUrl: "#",
     githubUrl: "#",
+    slug: "defi-trading-platform",
   },
   {
     id: "2",
@@ -120,6 +121,7 @@ const featuredProjects: Project[] = [
     category: "Blockchain",
     liveDemoUrl: "#",
     githubUrl: "#",
+    slug: "nft-marketplace",
   },
   {
     id: "3",
@@ -133,6 +135,7 @@ const featuredProjects: Project[] = [
     category: "Web App",
     liveDemoUrl: "#",
     githubUrl: "#",
+    slug: "e-commerce-platform",
   },
 ];
 

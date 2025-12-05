@@ -8,5 +8,14 @@ export interface Project {
   category: "All" | "Web App" | "Blockchain" | "Mobile App";
   liveDemoUrl?: string;
   githubUrl?: string;
+  slug: string;
+  // Detailed fields for project detail page
+  galleryImages?: string[];
+  overview?: string;
+  challenges?: string[];
+  solutions?: string[];
+  results?: string;
+  role?: string;
+  roleDescription?: string;
 }
 

@@ -28,6 +28,7 @@ export function ProjectsGrid({ projects }: ProjectsGridProps) {
           technologies={project.technologies}
           liveDemoUrl={project.liveDemoUrl}
           githubUrl={project.githubUrl}
+          slug={project.slug}
         />
       ))}
     </div>
