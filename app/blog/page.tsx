@@ -5,37 +5,8 @@ import { Header } from "@/components/Header";
 import { BlogPostCard } from "@/components/BlogPostCard";
 import { BlogSidebar } from "@/components/BlogSidebar";
 import { Pagination } from "@/components/Pagination";
-import { BlogPost, BlogCategory } from "@/types/blog";
-
-const allPosts: BlogPost[] = [
-  {
-    id: "1",
-    title: "Demystifying Layer 2 Scaling Solutions",
-    excerpt:
-      "An in-depth look at the various Layer 2 solutions aiming to solve Ethereum's scalability problem, from Rollups to Sidechains. We explore the trade-offs and what they mean for the future of decentralized applications.",
-    date: "October 26, 2023",
-    categories: ["Blockchain", "Tutorials"],
-    slug: "demystifying-layer-2-scaling-solutions",
-  },
-  {
-    id: "2",
-    title: "A Developer's Guide to Smart Contract Security",
-    excerpt:
-      "Security is paramount in the blockchain space. This guide covers common vulnerabilities in smart contracts, such as reentrancy and integer overflows, and provides best practices to write more secure and robust code.",
-    date: "September 15, 2023",
-    categories: ["Smart Contracts"],
-    slug: "developers-guide-smart-contract-security",
-  },
-  {
-    id: "3",
-    title: "Building a Modern DApp with Next.js and Ethers.js",
-    excerpt:
-      "A step-by-step tutorial on creating a decentralized application from scratch. We'll set up a Next.js frontend, connect to the Ethereum blockchain with Ethers.js, and interact with a simple smart contract.",
-    date: "August 02, 2023",
-    categories: ["Web Development", "Tutorials"],
-    slug: "building-modern-dapp-nextjs-ethers",
-  },
-];
+import { BlogCategory } from "@/types/blog";
+import { allBlogPosts } from "@/data/blog";
 
 const POSTS_PER_PAGE = 5;
 
@@ -45,7 +16,7 @@ export default function BlogPage() {
   const [currentPage, setCurrentPage] = useState(1);
 
   const filteredPosts = useMemo(() => {
-    let filtered = allPosts;
+    let filtered = allBlogPosts;
 
     // Filter by category
     if (activeCategory !== "All Posts") {
