@@ -12,6 +12,7 @@ const config: Config = {
       fontFamily: {
         display: ["var(--font-display)", "Space Grotesk", "sans-serif"],
         handwriting: ["var(--font-handwriting)", "Kalam", "cursive"],
+        caveat: ["var(--font-caveat)", "Caveat", "cursive"],
       },
     },
   },

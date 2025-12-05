@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Space_Grotesk, Kalam } from "next/font/google";
+import { Space_Grotesk, Kalam, Caveat } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "@/components/ThemeProvider";
 
@@ -13,6 +13,12 @@ const kalam = Kalam({
   variable: "--font-handwriting",
   subsets: ["latin"],
   weight: ["400", "700"],
+});
+
+const caveat = Caveat({
+  variable: "--font-caveat",
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700"],
 });
 
 export const metadata: Metadata = {
@@ -47,7 +53,7 @@ export default function RootLayout({
         />
       </head>
       <body
-        className={`${spaceGrotesk.variable} ${kalam.variable} font-display antialiased bg-background-light dark:bg-background-dark text-text-light dark:text-text-dark`}
+        className={`${spaceGrotesk.variable} ${kalam.variable} ${caveat.variable} font-display antialiased bg-background-light dark:bg-background-dark text-text-light dark:text-text-dark`}
       >
         <ThemeProvider>{children}</ThemeProvider>
       </body>
