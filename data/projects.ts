@@ -118,6 +118,42 @@ export const allProjects: Project[] = [
   },
   {
     id: "3",
+    title: "SmartMention",
+    description:
+      "An advanced social listening and signal tracking tool designed to help brands monitor online conversations in real time. Analyzes sentiment, impact, and confidence levels across thousands of platforms.",
+    imageUrl:
+      "https://res.cloudinary.com/dxbbl7nve/image/upload/v1764955866/Screenshot_24_qbxxft.png",
+    imageAlt: "SmartMention social listening dashboard showing analytics and signal tracking",
+    technologies: [
+      "Python",
+      "Node.js",
+      "React",
+      "PostgreSQL",
+      "Redis",
+      "Web Scraping",
+      "Sentiment Analysis",
+      "Real-time Processing",
+    ],
+    category: "Web App",
+    liveDemoUrl: "#",
+    githubUrl: "#",
+    slug: "smartmention",
+    overview:
+      "SmartMention is a comprehensive social listening and signal tracking platform that enables brands to monitor online conversations in real-time across thousands of platforms. The system tracks public mentions tied to custom keywords and hashtags, filtering by sentiment, confidence score, and impact rating. Projects can be segmented to target specific campaigns or topics, providing brands with actionable insights into their online presence, emerging trends, potential crises, and lead opportunities.",
+    challenges: [
+      "Building a scalable crawler engine capable of monitoring thousands of platforms simultaneously while maintaining real-time performance. The solution required implementing efficient web scraping techniques, rate limiting, and distributed processing to handle high-volume data ingestion without overwhelming target platforms.",
+      "Implementing intelligent keyword monitoring that tracks mentions, filters them into topics, and extracts valuable signals including leads, crises, trends, and anomalies. This required developing sophisticated natural language processing pipelines and pattern recognition algorithms to categorize and prioritize signals effectively.",
+      "Creating a sentiment analysis system that accurately determines the emotional tone and impact of mentions across diverse content types and languages. The challenge was building a robust model that could handle context, sarcasm, and cultural nuances while providing actionable confidence scores.",
+      "Designing a scheduler system that manages monitoring tasks, data collection intervals, and alert triggers while ensuring system reliability and preventing data loss. This required implementing fault-tolerant job queues and state management across distributed systems.",
+    ],
+    results:
+      "SmartMention successfully processes millions of mentions daily, providing brands with real-time insights into their online presence. The crawler engine demonstrates high reliability and scalability, handling peak loads without degradation. The sentiment analysis system achieves strong accuracy in identifying positive, negative, and neutral signals, enabling brands to respond proactively to emerging trends and potential crises. The platform's analytics dashboard has become an essential tool for brand monitoring, helping clients identify opportunities, manage reputation, and track campaign performance across diverse online platforms.",
+    role: "Backend Engineer & Crawler Architect",
+    roleDescription:
+      "Built the crawler engine and keyword monitoring system that tracks mentions, filters into topics, extracts leads, crises, trends, and anomalies. Implemented sentiment analysis and scheduler systems. Assisted the team in building the frontend analytics dashboard.",
+  },
+  {
+    id: "4",
     title: "DeFi Trading Platform",
     description:
       "A decentralized finance platform for trading digital assets with real-time data.",
@@ -131,7 +167,7 @@ export const allProjects: Project[] = [
     slug: "defi-trading-platform",
   },
   {
-    id: "4",
+    id: "5",
     title: "NFT Marketplace",
     description:
       "A full-stack marketplace for creating, buying, and selling unique NFTs on the Ethereum blockchain.",
@@ -145,7 +181,7 @@ export const allProjects: Project[] = [
     slug: "nft-marketplace",
   },
   {
-    id: "5",
+    id: "6",
     title: "E-commerce Platform",
     description:
       "A modern, responsive e-commerce solution with a custom backend and payment integration.",
@@ -176,7 +212,7 @@ export const allProjects: Project[] = [
       "Responsible for backend architecture, database design, and frontend implementation.",
   },
   {
-    id: "6",
+    id: "7",
     title: "Task Management App",
     description:
       "A collaborative tool to help teams organize, track, and manage their work efficiently.",
@@ -190,7 +226,7 @@ export const allProjects: Project[] = [
     slug: "task-management-app",
   },
   {
-    id: "7",
+    id: "8",
     title: "Personal Blog Engine",
     description:
       "A lightweight and fast blog built with a static site generator and headless CMS.",
@@ -204,7 +240,7 @@ export const allProjects: Project[] = [
     slug: "personal-blog-engine",
   },
   {
-    id: "8",
+    id: "9",
     title: "Supply Chain dApp",
     description:
       "A blockchain application to track goods from origin to consumer with full transparency.",
