@@ -118,20 +118,6 @@ const experiences = [
     description:
       "Managed IT operations and infrastructure for a virtual betting company. Responsible for overseeing technical systems, ensuring platform reliability, and leading the IT team to support business operations.",
   },
-  {
-    period: "2019 - 2021",
-    title: "Full-Stack Developer",
-    company: "Innovatech Solutions",
-    description:
-      "Developed and maintained web applications using React and Node.js, contributing to a 20% improvement in application performance.",
-  },
-  {
-    period: "2018 - 2019",
-    title: "Software Engineer Intern",
-    company: "Tech Startup Co.",
-    description:
-      "Assisted in the development of a customer relationship management tool, focusing on frontend features and bug fixes.",
-  },
 ];
 
 // Show first 3 projects as featured
