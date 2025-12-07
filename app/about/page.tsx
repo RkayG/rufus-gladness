@@ -121,14 +121,14 @@ export default function AboutPage() {
             <ProfileHeader
               name="Rufus"
               title="Software & Blockchain Engineer"
-              description="A passionate blockchain engineer with a focus on building decentralized solutions that are secure, scalable, and user-friendly. I thrive on solving complex problems and turning innovative ideas into reality."
+              description="A passionate full-stack engineer with a focus on building software and blockchain solutions that are secure, scalable, and user-friendly. I enjoy solving problems that require creative solutions."
             />
             <section className="mt-16">
               <h2 className="font-handwriting text-3xl font-bold text-[#6b4a49] dark:text-[#c8a993]">
                 My Story
               </h2>
               <p className="mt-4 text-base font-normal leading-relaxed text-[#333333]/80 dark:text-[#c8a993]">
-                I didn&apos;t start as a traditional software engineer—I started as a crypto trader. Watching markets move every day made me deeply curious about how blockchains and cryptocurrencies actually work under the hood, which pulled me into programming. Once I got into software development, I realized there&apos;s a big gap between casual scripts, regular web apps, and the kind of engineering needed to build real blockchain systems.
+                I started sofware engineering as a curious crypto trader. Watching markets move every day made me deeply curious about how blockchains and cryptocurrencies actually work under the hood, which pulled me into programming. Once I got into software development, I realized there&apos;s a big gap between casual scripts, regular web apps, and the kind of engineering needed to build real blockchain systems.
               </p>
               <p className="mt-4 text-base font-normal leading-relaxed text-[#333333]/80 dark:text-[#c8a993]">
                 Instead of jumping straight into smart contracts, I first focused on mastering Web2 fundamentals: building APIs, architecting backends, working with databases, and shipping production systems end-to-end. With that foundation, I moved into the EVM and Solana ecosystems, exploring AMMs, MEV bots, trading algorithms, and full-stack dApps. Today I combine that trading background with solid engineering experience to design and build blockchain and fintech platforms that are not just clever, but reliable, secure, and scalable.
