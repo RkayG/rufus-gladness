@@ -2,7 +2,82 @@ import { Project } from "@/types/project";
 
 export const allProjects: Project[] = [
   {
+    id: "0",
+    title: "Secure API Handler Template",
+    description:
+      "An enterprise-grade API handler framework for Node.js + Express + Prisma with authentication, security, multi-tenancy, caching, and observability.",
+    imageUrl:
+      "https://lh3.googleusercontent.com/aida-public/AB6AXuDpau77knzT06L2Xl0r0QhEw6zEUmh41R3nzDJbEyOdvlzvmHgY4uxBAJMRHtCr-bQnAZx89Rf_yg8C6I-HRgrvsdZ1HdXLmk7VUo_ES4M_bnWUfTsaIcILfytwxTwRfHHoqGvrbco4BJhxqMHwAk1aEifp5vJ5k1EgS_d3TkyqkIjN2uAAFBLJGjwT_qrOwVv9MR1l-dqFZMHpfiXHQuS-e7XazQRajAzFMbiFOd-Wel6Dw6jp2eOOLWGtTDfETtrCPEp66Sz0bYg",
+    imageAlt: "Secure API Handler architecture diagram showing security layers",
+    technologies: [
+      "TypeScript",
+      "Node.js",
+      "Express",
+      "Prisma",
+      "Redis",
+      "Docker",
+      "PostgreSQL",
+      "JWT",
+      "Zod",
+    ],
+    category: "Web App",
+    liveDemoUrl: "https://github.com/RkayG/secure-api-request-handler",
+    githubUrl: "https://github.com/RkayG/secure-api-request-handler",
+    slug: "secure-api-handler",
+    galleryImages: [
+      "https://lh3.googleusercontent.com/aida-public/AB6AXuDpau77knzT06L2Xl0r0QhEw6zEUmh41R3nzDJbEyOdvlzvmHgY4uxBAJMRHtCr-bQnAZx89Rf_yg8C6I-HRgrvsdZ1HdXLmk7VUo_ES4M_bnWUfTsaIcILfytwxTwRfHHoqGvrbco4BJhxqMHwAk1aEifp5vJ5k1EgS_d3TkyqkIjN2uAAFBLJGjwT_qrOwVv9MR1l-dqFZMHpfiXHQuS-e7XazQRajAzFMbiFOd-Wel6Dw6jp2eOOLWGtTDfETtrCPEp66Sz0bYg",
+      "https://lh3.googleusercontent.com/aida-public/AB6AXuAGWzrzVyOaV-6GhREOmfJqRhlez0d2cjEMVMIBe2wXMWt_WyOjSy3jdsdzFxcmP5OVZ4jacODopsr5B_MnfGkaIaCK2BkMKyH2oJ-rH4C3zd8G_tyzk1cuKgmsaJfFu_4G_K6UKsyyW2KWLIPnC_zSQJ2F0QTpKgzPFUf_-zrFVqCqOgCW7Wqh0fzhfZOXCKGvfRrnSYkwYC9lmkMZB-t_VoMSVMX-Sh2Z49jsk3XsszmGnnLswMLojSgVuFvFN3FJRD-xTSe346g",
+      "https://lh3.googleusercontent.com/aida-public/AB6AXuBGYg8KRBfhnWex9PfaBYROuTTOHLZNTzi-CpYn-8_96YU5KNJQJ0ciiI7szujMheNX1vJctp2-WLDzE1ez0U4o29XybdWmyUUPWPwyifuV6iZxsEH4ztdqZ81_8M8jASx0sCyiuwKWF8jzqvHeTwt9d59eNeAfpWkO3QB02LKYjvjlJi-t_0n48YQh8gPVOK2sUYsgi5H-NlBkD_vA8d9foh3aBR54MJfCX7yhc1pDq-HwgYt99u2Ou6-qEp5_ryIKzcOTKgTVT6Q",
+      "https://lh3.googleusercontent.com/aida-public/AB6AXuA1AzDnf2e_P4-1vBEq_fZ5oRDEFGo6ntVvKCGP4zlV3u9wcmtInz0n2XFSmFmj7bXcjw0FYXoOldi_bL2hYRxNbQomaMWz2qLIZ-uEAXvRXrJFxf10Cj0a-ChhPrYqTEl9dOrWnYASRFtNuZS8Z9kQkOULHzWL0YIi5AzHfULt8HbRvahc7HKwoCeYvxLrCdsaQ22i7ilrwNe3WtCf4y4FKS2EiWrFuoZhHwXgdBNYoV0kWbhgJ-d2Sf0GBUEnwLd0LHVzqfa1bLY",
+    ],
+    overview:
+      "A comprehensive, production-ready API handler framework designed to accelerate secure backend development. This enterprise-grade template provides a robust foundation for building scalable, multi-tenant applications with built-in security best practices, performance optimizations, and observability features. The framework abstracts away common concerns like authentication, input validation, rate limiting, caching, and monitoring, allowing developers to focus on business logic while maintaining industry-standard security and performance.",
+    challenges: [
+      "Designing a flexible authentication system that supports multiple strategies (JWT, API Keys, OAuth) while maintaining type safety and developer ergonomics. The solution required a strategy pattern implementation with a unified interface that could be easily extended without breaking existing code.",
+      "Implementing secure multi-tenant architecture with support for different isolation strategies (shared schema, separate schema, separate database) while ensuring data isolation and preventing tenant data leakage. This required careful design of context management and database query scoping.",
+      "Creating a performant caching layer that works across distributed systems using Redis, with intelligent cache invalidation strategies and fallback to in-memory caching. The challenge was balancing cache hit rates with data freshness and handling cache stampede scenarios.",
+      "Building comprehensive input sanitization and validation that prevents XSS, SQL injection, and CSRF attacks while maintaining developer productivity. This required integrating multiple security libraries (DOMPurify, Zod) and creating a unified sanitization pipeline.",
+    ],
+    results:
+      "The framework has been successfully used as a foundation for multiple production applications, significantly reducing development time while ensuring security and performance standards. It provides a complete solution for building secure APIs with features like distributed rate limiting, automatic request validation, multi-tenant support, and comprehensive monitoring. The template demonstrates expertise in enterprise-level architecture, security best practices, and developer experience optimization.",
+    role: "Full-Stack Developer & Framework Architect",
+    roleDescription:
+      "Designed and implemented the complete framework architecture, including security layers, multi-tenant support, caching strategies, and developer tooling.",
+  },
+  {
     id: "1",
+    title: "Solana Liquidation Bot",
+    description:
+      "A production-ready Solana liquidation bot with flash loan integration, supporting Solend, MarginFi, and Kamino lending protocols with zero-capital operation.",
+    imageUrl:
+      "https://lh3.googleusercontent.com/aida-public/AB6AXuDNRyX4RMuo6NZb023axJ_9QdCXm3nbJ4YIl7tnh3jeFnwZNWbpdSLOXwViIn0dTfaRr13z-mJ8V5O8aiqsrXpPbcoxhSVIWV7N7E_jAwKF1_-ptUdajYI4Fcy9Yod9GanyQB6uHTcauyYsRM0aGegLB1GYrkWES3ZM9M2jW2cgMMcA8uGhAj0XuwrYnjZh4eO7kp2whWGZ3AmGQzHe1juuLFUUU8KElDMW0S_a8DohtaaMk0LAR8rrdg0tA2TpV1EGbfXQJmMTVYw",
+    imageAlt: "Solana liquidation bot architecture showing protocol integrations",
+    technologies: ["Rust", "Solana", "Anchor", "Flash Loans", "Solend", "MarginFi", "Kamino"],
+    category: "Blockchain",
+    liveDemoUrl: "#",
+    githubUrl: "#",
+    slug: "solana-liquidation-bot",
+    galleryImages: [
+      "https://lh3.googleusercontent.com/aida-public/AB6AXuDNRyX4RMuo6NZb023axJ_9QdCXm3nbJ4YIl7tnh3jeFnwZNWbpdSLOXwViIn0dTfaRr13z-mJ8V5O8aiqsrXpPbcoxhSVIWV7N7E_jAwKF1_-ptUdajYI4Fcy9Yod9GanyQB6uHTcauyYsRM0aGegLB1GYrkWES3ZM9M2jW2cgMMcA8uGhAj0XuwrYnjZh4eO7kp2whWGZ3AmGQzHe1juuLFUUU8KElDMW0S_a8DohtaaMk0LAR8rrdg0tA2TpV1EGbfXQJmMTVYw",
+      "https://lh3.googleusercontent.com/aida-public/AB6AXuAGWzrzVyOaV-6GhREOmfJqRhlez0d2cjEMVMIBe2wXMWt_WyOjSy3jdsdzFxcmP5OVZ4jacODopsr5B_MnfGkaIaCK2BkMKyH2oJ-rH4C3zd8G_tyzk1cuKgmsaJfFu_4G_K6UKsyyW2KWLIPnC_zSQJ2F0QTpKgzPFUf_-zrFVqCqOgCW7Wqh0fzhfZOXCKGvfRrnSYkwYC9lmkMZB-t_VoMSVMX-Sh2Z49jsk3XsszmGnnLswMLojSgVuFvFN3FJRD-xTSe346g",
+      "https://lh3.googleusercontent.com/aida-public/AB6AXuBGYg8KRBfhnWex9PfaBYROuTTOHLZNTzi-CpYn-8_96YU5KNJQJ0ciiI7szujMheNX1vJctp2-WLDzE1ez0U4o29XybdWmyUUPWPwyifuV6iZxsEH4ztdqZ81_8M8jASx0sCyiuwKWF8jzqvHeTwt9d59eNeAfpWkO3QB02LKYjvjlJi-t_0n48YQh8gPVOK2sUYsgi5H-NlBkD_vA8d9foh3aBR54MJfCX7yhc1pDq-HwgYt99u2Ou6-qEp5_ryIKzcOTKgTVT6Q",
+    ],
+    overview:
+      "A production-ready Solana liquidation bot designed for zero-capital operation using flash loans. The bot monitors multiple lending protocols (Solend, MarginFi, Kamino) simultaneously, identifying liquidation opportunities and executing profitable trades within Solana's 400ms block times. Built with Rust for maximum performance, the system includes comprehensive risk management, transaction simulation, and real-time monitoring to ensure safe and profitable operations in a highly competitive environment.",
+    challenges: [
+      "Optimizing for Solana's 400ms block times required building an ultra-fast monitoring and execution system. The solution involved implementing efficient on-chain data parsing, priority queues for opportunity ranking, and parallel protocol monitoring to detect and act on opportunities before competitors.",
+      "Implementing flash loan integration across multiple protocols (Solend, MarginFi, Kamino) with different interfaces and requirements. This required creating a unified abstraction layer that handles protocol-specific differences while maintaining type safety and ensuring atomic transaction execution.",
+      "Building a robust simulation engine that accurately predicts transaction outcomes before execution. The challenge was accounting for slippage, gas costs, and market movements between simulation and execution, requiring sophisticated profit calculation algorithms and safety margins.",
+      "Designing comprehensive risk management systems including daily loss limits, circuit breakers, and position size controls. This required implementing stateful tracking across bot restarts, configurable thresholds, and automatic shutdown mechanisms to protect capital.",
+    ],
+    results:
+      "The bot successfully operates in production with zero capital requirements, using flash loans exclusively for all operations. It demonstrates high reliability with comprehensive safety checks, achieving a 15-30% success rate on detected opportunities. The system processes 5-20 liquidations daily with average profits of $30-80 per execution, showcasing the effectiveness of the multi-protocol monitoring and fast execution architecture. The project demonstrates advanced Solana development skills, systems programming expertise in Rust, and deep understanding of DeFi protocols and financial risk management.",
+    role: "Blockchain Developer & Systems Architect",
+    roleDescription:
+      "Designed and implemented the complete liquidation bot architecture, including protocol integrations, flash loan handling, risk management systems, and real-time monitoring infrastructure.",
+  },
+  {
+    id: "2",
     title: "DeFi Trading Platform",
     description:
       "A decentralized finance platform for trading digital assets with real-time data.",
@@ -16,7 +91,7 @@ export const allProjects: Project[] = [
     slug: "defi-trading-platform",
   },
   {
-    id: "2",
+    id: "3",
     title: "NFT Marketplace",
     description:
       "A full-stack marketplace for creating, buying, and selling unique NFTs on the Ethereum blockchain.",
@@ -30,7 +105,7 @@ export const allProjects: Project[] = [
     slug: "nft-marketplace",
   },
   {
-    id: "3",
+    id: "4",
     title: "E-commerce Platform",
     description:
       "A modern, responsive e-commerce solution with a custom backend and payment integration.",
@@ -61,7 +136,7 @@ export const allProjects: Project[] = [
       "Responsible for backend architecture, database design, and frontend implementation.",
   },
   {
-    id: "4",
+    id: "5",
     title: "Task Management App",
     description:
       "A collaborative tool to help teams organize, track, and manage their work efficiently.",
@@ -75,7 +150,7 @@ export const allProjects: Project[] = [
     slug: "task-management-app",
   },
   {
-    id: "5",
+    id: "6",
     title: "Personal Blog Engine",
     description:
       "A lightweight and fast blog built with a static site generator and headless CMS.",
@@ -89,7 +164,7 @@ export const allProjects: Project[] = [
     slug: "personal-blog-engine",
   },
   {
-    id: "6",
+    id: "7",
     title: "Supply Chain dApp",
     description:
       "A blockchain application to track goods from origin to consumer with full transparency.",

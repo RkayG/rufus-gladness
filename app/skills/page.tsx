@@ -102,7 +102,21 @@ const developmentTools = [
   { name: "Postman", icon: "code" },
   { name: "Insomnia", icon: "code" },
   { name: "cURL", icon: "code" },
+  { name: "Remix", icon: "code" },
 ];
+
+const securityAccessControl = [
+  { name: "Role-Based Access Control", icon: "code" },
+  { name: "Data Encryption", icon: "code" },
+  { name: "Two-Factor Authentication", icon: "code" },
+  { name: "XSS Protection", icon: "code" },
+  { name: "CSRF Protection", icon: "code" },
+  { name: "SQL Injection Prevention", icon: "code" },
+  { name: "Rate Limiting", icon: "code" },
+  { name: "Content Security Policy", icon: "code" },
+  { name: "Bot Protection & Abuse Prevention", icon: "code" },
+];
+
 
 export default function SkillsPage() {
   return (
@@ -161,6 +175,10 @@ export default function SkillsPage() {
                 <SkillsCategory
                   title="Architecture & Systems"
                   skills={architectureSystems}
+                />
+                <SkillsCategory
+                  title="Security & Access Control"
+                  skills={securityAccessControl}
                 />
                 <SkillsCategory
                   title="Development Tools"
