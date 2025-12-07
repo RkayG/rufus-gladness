@@ -5,8 +5,11 @@ const programmingLanguages = [
   { name: "JavaScript", icon: "javascript" },
   { name: "Python", icon: "data_object" },
   { name: "Solidity", icon: "hexagon" },
-  { name: "Go", icon: "code" },
   { name: "TypeScript", icon: "integration_instructions" },
+  { name: "C", icon: "code" },
+  { name: "Rust", icon: "code" },
+  { name: "Bash", icon: "code" },
+  { name: "React Native", icon: "code" },
 ];
 
 const frameworksLibraries = [
@@ -14,15 +17,91 @@ const frameworksLibraries = [
   { name: "Next.js", icon: "web" },
   { name: "Node.js", icon: "developer_mode" },
   { name: "Tailwind CSS", icon: "air" },
+  { name: "Expo", icon: "code" },
   { name: "Ethers.js", icon: "link" },
+  { name: "Express", icon: "code" },
+  { name: "Django", icon: "code" },
+  { name: "Flask", icon: "code" },
+  { name: "FastAPI", icon: "code" },
+  { name: "Vite", icon: "code" },
+  { name: "Prisma", icon: "code" },
 ];
 
-const blockchainDevOps = [
+const blockchainDevelopment = [
   { name: "Ethereum", icon: "currency_bitcoin" },
-  { name: "Docker", icon: "deployed_code" },
-  { name: "AWS", icon: "cloud" },
-  { name: "Git", icon: "share" },
+  { name: "Solana", icon: "code" },
+  { name: "Binance Smart Chain", icon: "code" },
+  { name: "Polygon", icon: "code" },
   { name: "IPFS", icon: "hub" },
+  { name: "Hardhat", icon: "code" },
+  { name: "Truffle", icon: "code" },
+  { name: "OpenZeppelin", icon: "code" },
+  { name: "Foundry", icon: "code" },
+  { name: "Anchor", icon: "code" },
+];
+
+const databases = [
+  { name: "PostgreSQL", icon: "code" },
+  { name: "MySQL", icon: "code" },
+  { name: "MongoDB", icon: "code" },
+  { name: "Redis", icon: "code" },
+  { name: "Supabase", icon: "code" },
+];
+
+const cloudPlatforms = [
+  { name: "AWS", icon: "cloud" },
+  { name: "Hetzner", icon: "code" },
+  { name: "Railway", icon: "code" },
+  { name: "DigitalOcean", icon: "code" },
+  { name: "OVH Cloud", icon: "code" },
+  { name: "Vercel", icon: "code" },
+  { name: "Render", icon: "code" },
+];
+
+const devOpsDeployment = [
+  { name: "Docker", icon: "deployed_code" },
+  { name: "Kubernetes", icon: "code" },
+  { name: "Helm", icon: "code" },
+  { name: "Jenkins", icon: "code" },
+  { name: "GitLab CI/CD", icon: "code" },
+  { name: "GitHub Actions", icon: "code" },
+  { name: "Git", icon: "share" },
+];
+
+const testing = [
+  { name: "Jest", icon: "code" },
+  { name: "React Testing Library", icon: "code" },
+  { name: "Cypress", icon: "code" },
+  { name: "Playwright", icon: "code" },
+  { name: "Puppeteer", icon: "code" },
+  { name: "TestCafe", icon: "code" },
+  { name: "Selenium", icon: "code" },
+  { name: "Mocha", icon: "code" },
+];
+
+const monitoringReporting = [
+  { name: "Metabase", icon: "code" },
+  { name: "Prometheus", icon: "code" },
+  { name: "Grafana", icon: "code" },
+  { name: "Datadog", icon: "code" },
+  { name: "Sentry", icon: "code" },
+];
+
+const architectureSystems = [
+  { name: "Microservices", icon: "code" },
+  { name: "Monolith", icon: "code" },
+  { name: "Event-Driven Architecture", icon: "code" },
+  { name: "Multi-Tenant Architecture", icon: "code" },
+  { name: "Serverless Architecture", icon: "code" },
+  { name: "API Gateway", icon: "code" },
+  { name: "Domain-Driven Design", icon: "code" },
+  { name: "Sharding", icon: "code" },
+];
+
+const developmentTools = [
+  { name: "Postman", icon: "code" },
+  { name: "Insomnia", icon: "code" },
+  { name: "cURL", icon: "code" },
 ];
 
 export default function SkillsPage() {
@@ -56,8 +135,36 @@ export default function SkillsPage() {
                   skills={frameworksLibraries}
                 />
                 <SkillsCategory
-                  title="Blockchain & DevOps"
-                  skills={blockchainDevOps}
+                  title="Blockchain Development"
+                  skills={blockchainDevelopment}
+                />
+                <SkillsCategory
+                  title="Databases"
+                  skills={databases}
+                />
+                <SkillsCategory
+                  title="Cloud Platforms"
+                  skills={cloudPlatforms}
+                />
+                <SkillsCategory
+                  title="DevOps & Deployment"
+                  skills={devOpsDeployment}
+                />
+                <SkillsCategory
+                  title="Testing"
+                  skills={testing}
+                />
+                <SkillsCategory
+                  title="Monitoring & Reporting"
+                  skills={monitoringReporting}
+                />
+                <SkillsCategory
+                  title="Architecture & Systems"
+                  skills={architectureSystems}
+                />
+                <SkillsCategory
+                  title="Development Tools"
+                  skills={developmentTools}
                 />
               </div>
           </main>
