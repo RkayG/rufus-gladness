@@ -72,11 +72,18 @@ const skills = [
 
 const experiences = [
   {
-    period: "2021 - Present",
-    title: "Senior Blockchain Engineer",
-    company: "Decentralized Future Inc.",
+    period: "2025 - Present",
+    title: "CTO / Lead Engineer",
+    company: "J Vortex",
     description:
-      "Lead development of smart contracts for DeFi protocols, architected scalable backend systems, and mentored junior developers.",
+      "Part-time role leading the development of the company's suite of software, including Wigree, a next-generation escrow-backed peer-to-peer social marketplace. Responsible for technical strategy, architecture decisions, and engineering team leadership.",
+  },
+  {
+    period: "2025 - Present",
+    title: "Lead Developer",
+    company: "Cxperia",
+    description:
+      "Built the Cxperia platform, a customer loyalty platform for cosmetic brands to design and manage dynamic product experiences. Led the development of the entire platform architecture, focusing on creating engaging and personalized customer experiences.",
   },
   {
     period: "2019 - 2021",
