@@ -61,8 +61,8 @@ export const allProjects: Project[] = [
       "Real-time Processing",
     ],
     category: "Web App",
-    liveDemoUrl: "#",
-    githubUrl: "#",
+    liveDemoUrl: "https://smartmention.com",
+    githubUrl: "https://github.com/RkayG/brandtrack",
     slug: "smartmention",
     galleryImages: [
       "https://res.cloudinary.com/dxbbl7nve/image/upload/v1765126610/Screenshot_26_bzyjmb.png",
@@ -110,8 +110,8 @@ export const allProjects: Project[] = [
       "Express",
     ],
     category: "Mobile App",
-    liveDemoUrl: "#",
-    githubUrl: "#",
+    liveDemoUrl: "https://onroute-admin.vercel.app",
+    githubUrl: "https://github.com/RkayG/onroute",
     slug: "onroute",
     galleryImages: [
       "https://res.cloudinary.com/dxbbl7nve/image/upload/v1764955866/Screenshot_24_qbxxft.png",
@@ -172,8 +172,8 @@ export const allProjects: Project[] = [
     imageAlt: "Solana liquidation bot architecture showing protocol integrations",
     technologies: ["Rust", "Solana", "Anchor", "Flash Loans", "Solend", "MarginFi", "Kamino"],
     category: "Blockchain",
-    liveDemoUrl: "#",
-    githubUrl: "#",
+    liveDemoUrl: "",
+    githubUrl: "https://github.com/RkayG/liquidation-bot",
     slug: "solana-liquidation-bot",
     galleryImages: [
       "https://lh3.googleusercontent.com/aida-public/AB6AXuDNRyX4RMuo6NZb023axJ_9QdCXm3nbJ4YIl7tnh3jeFnwZNWbpdSLOXwViIn0dTfaRr13z-mJ8V5O8aiqsrXpPbcoxhSVIWV7N7E_jAwKF1_-ptUdajYI4Fcy9Yod9GanyQB6uHTcauyYsRM0aGegLB1GYrkWES3ZM9M2jW2cgMMcA8uGhAj0XuwrYnjZh4eO7kp2whWGZ3AmGQzHe1juuLFUUU8KElDMW0S_a8DohtaaMk0LAR8rrdg0tA2TpV1EGbfXQJmMTVYw",

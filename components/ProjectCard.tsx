@@ -26,7 +26,7 @@ export function ProjectCard({
       {slug ? (
         <Link href={`/projects/${slug}`}>
           <div
-            className="w-full bg-center bg-no-repeat aspect-video bg-cover rounded-lg cursor-pointer hover:opacity-90 transition-opacity"
+            className="w-full bg-center bg-no-repeat aspect-video bg-contain rounded-lg cursor-pointer hover:opacity-90 transition-opacity"
             style={{ backgroundImage: `url(${imageUrl})` }}
             role="img"
             aria-label={imageAlt}
@@ -34,7 +34,7 @@ export function ProjectCard({
         </Link>
       ) : (
         <div
-          className="w-full bg-center bg-no-repeat aspect-video bg-cover rounded-lg"
+          className="w-full bg-center bg-no-repeat aspect-video bg-contain rounded-lg"
           style={{ backgroundImage: `url(${imageUrl})` }}
           role="img"
           aria-label={imageAlt}
@@ -68,7 +68,7 @@ export function ProjectCard({
         </div>
       </div>
       <div className="flex items-center gap-4 mt-auto pt-2">
-        {liveDemoUrl && (
+        {liveDemoUrl && liveDemoUrl !== "#" && liveDemoUrl.trim() !== "" && (
           <Link
             className="flex items-center gap-2 text-[#333333] dark:text-white hover:text-primary transition-colors text-sm font-semibold"
             href={liveDemoUrl}

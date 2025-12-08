@@ -143,12 +143,7 @@ export function CofounderWizard() {
         <div className="mx-auto flex w-full max-w-[960px] flex-col px-4 sm:px-8 lg:px-0">
           <Header />
           <main className="flex-1">
-            {/* Page Heading */}
-            <div className="flex flex-col gap-2 text-center py-8 sm:py-12">
-              <h1 className="font-handwriting text-4xl font-bold text-primary sm:text-5xl md:text-6xl">
-                Want a Technical Co-founder?
-              </h1>
-            </div>
+        
             {/* Main Content */}
             {currentStep === 4 ? (
         <div className="flex h-full grow flex-col">
@@ -348,7 +343,7 @@ export function CofounderWizard() {
               {/* Page Heading */}
               <div className="flex flex-col gap-2 text-center">
                 <h1 className="font-handwriting text-5xl font-bold text-primary sm:text-6xl">
-                  Introduction & Contact
+                  Want a Technical Co-founder?
                 </h1>
                 <p className="text-base text-text-light/80 dark:text-text-dark/80">
                   I&apos;d like to get to know you better. Please fill out the form below.
