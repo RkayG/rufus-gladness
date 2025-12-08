@@ -134,6 +134,35 @@ export const allProjects: Project[] = [
       "Designed and developed the complete OnRoute platform including mobile app, admin dashboard, real-time WebSocket infrastructure, GPS validation system, and analytics engine.",
   },
   {
+    id: "4",
+    title: "Portfolio Website",
+    description:
+      "A modern, responsive portfolio website showcasing projects, skills, and experience. Built with Next.js 16, featuring a clean design, interactive project gallery, and a co-founder wizard for potential partnerships.",
+    imageUrl:
+      "https://res.cloudinary.com/dxbbl7nve/image/upload/v1765189057/portfolio_website_xdpsmy.png",
+    imageAlt: "Portfolio website showing modern design with project showcase and navigation",
+    technologies: [
+      "Next.js 16",
+      "TypeScript",
+      "Tailwind CSS",
+      "React",
+      "App Router",
+      "Static Site Generation",
+    ],
+    category: "Web App",
+    liveDemoUrl: "https://rufus-gladness.vercel.app",
+    githubUrl: "https://github.com/RkayG/portfolio-new",
+    slug: "portfolio-website",
+    galleryImages: [
+      "https://res.cloudinary.com/dxbbl7nve/image/upload/v1765189057/portfolio_website_xdpsmy.png",
+    ],
+    overview:
+      "A modern, responsive portfolio website designed and developed to showcase professional work, skills, and experience. The site features a clean, intuitive design with smooth navigation, an interactive project gallery with detailed project pages, an about section highlighting background and expertise, and an innovative co-founder wizard that allows potential partners to submit detailed partnership inquiries through a multi-step form. Built with Next.js 16 using the App Router for optimal performance, TypeScript for type safety, and Tailwind CSS for modern, responsive styling. The site uses static site generation for fast loading times and easy deployment, with a component-based architecture for maintainability and scalability.",
+    role: "Designer & Developer",
+    roleDescription:
+      "Designed and developed the complete portfolio website including UI/UX design, project showcase system, co-founder wizard, and all interactive features.",
+  },
+  {
     id: "3",
     title: "Solana Liquidation Bot",
     description:
@@ -227,8 +256,8 @@ export const allProjects: Project[] = [
       "Static Site Generation",
     ],
     category: "Web App",
-    liveDemoUrl: "#",
-    githubUrl: "#",
+    liveDemoUrl: "https://oh-pharmacy-m5xo.vercel.app/",
+    githubUrl: "https://github.com/RkayG/oh-pharmacy",
     slug: "oh-health-pharmacy",
     galleryImages: [
       "https://res.cloudinary.com/dxbbl7nve/image/upload/v1765188321/oh-pharma-website_bdwep4.png",
