@@ -10,75 +10,78 @@ import { allProjects } from "@/data/projects";
 const skills = [
   {
     name: "Python",
-    iconUrl:
-      "https://lh3.googleusercontent.com/aida-public/AB6AXuAgg18wuXmd5FNOZhqI38kJI9H5LB-raVY_hW_mfeohooK7UNognIZ5p2tGg6_ncnOf1K5beoc7Plh8nSs0cOKXUTgnh9gioO11cQvqEhEjOjlzdXy6boZKUQ72K3EE6mog_s9srDeIwTbHAwAg3vL-ZTe50_FiNvwygsM2fRN_3B6pPy1mLUhJv69Oa64NSMeeU2-HY3xu5hJGL8K1tE4s3ch6R4VJwJQ_qPtipn7P9j5lGMg2pJX8VBgCHKVIvW6Jn7JfapG3ze8",
+    iconUrl: "python",
     iconAlt: "Python logo",
   },
   {
     name: "Solidity",
-    iconUrl:
-      "https://lh3.googleusercontent.com/aida-public/AB6AXuCKA6_8Y3fYoUiYLgP59y4yjOL0PtHi0WY6MWXUxNZOAQ5IN-_qVQ2Cnbq3dro6jFnAuqz0VkNvRq73IouzxTcFq_Zk3TcW7eObGAL7BG5hnLW2CZeLYG1_g8yzWikoDZ9XVtPKDuIu5iXZx3OoFcTmEff8VQrnI0wFZnpZN7ufmqJ-DFF-b9RB_E7JT4_6h1_uRaBmDSxUE1WH0Plw-ecx9jmnU9maBlDN5aNBmtxfAgk9b7AEwKCj3ptAMnujPCjPoojplRH2lTg",
+    iconUrl: "solidity",
     iconAlt: "Solidity logo",
   },
   {
     name: "React",
-    iconUrl:
-      "https://lh3.googleusercontent.com/aida-public/AB6AXuArhO8Y65-QMsbRZgXXZlMjOL9pdW4fTEuN1PTlkdHbPGr4Z61N_hE1H1glvXxx-rFrl6s89SF9_g6gecE1kumKUTqQL9hno4fc5n9cmlpYOwD5ebXzqD6oc_OMRjz8WIC8SXhvEbPVxgtH-QC9CfkdIHR7_ScQFSE6GF4CecvEAtL-fcDVNBs_G40m5DT_xVeXEuhFAwM8_F1Kfz30aiKGOK4fdXDihOXF8y9AdL4Ld-yYsoJ53rKDhNbyBYvLvq1yLKhkUGHlU_4",
+    iconUrl: "react",
     iconAlt: "React logo",
   },
   {
     name: "JavaScript",
-    iconUrl:
-      "https://lh3.googleusercontent.com/aida-public/AB6AXuB-qwURbilOFgBYhfR3Oue4zYCO6BknKAlVslCO8bYq2JA9kqPUUsOoZ4PUgKaw7mEYjJheLE7marKZtccNz_27PC53-lUJUkP45H5N10Qjr86MH0cPO9uXkRmtV6lQN3npYXucizeyogdmLYWWRvGPRL-_0OrMIMdFuZib-so1rvT39iQ9zChcWXFQhiIfZ9gqpAv8kAuyiD9rLgxe_zMPo4hAT66ARc9UIYnDUHTwGxLnyTyKN9hJ9Hjj_LD5G7dP8P0Vh_UDUg0",
+    iconUrl: "javascript",
     iconAlt: "JavaScript logo",
   },
   {
     name: "Docker",
-    iconUrl:
-      "https://lh3.googleusercontent.com/aida-public/AB6AXuAmHjgfLSm65-Z_eJZE4XpjpWLoZtbY4h_xwUyHD30dGig1wLy0PB6-0-ka73ZEFNstTUSb_sK-vmUuxS4Ec_X1PTQmsUfIpon_P9tyd49ly7IBTPIlqJLI7Imkfg8LE-wmH6j7rg2A0ktkkHmIf-4P40MMuQoIWgbbcQphfK5a7y5QbbBUL4ztiI0RwLlMS5W1-a14dHJbjIOD09LTpROnPrFLUj24hu_BrxzW1FVXTRUIfGhsG9z8zM8xAFrzYG_GR6rkOFq6Lwo",
+    iconUrl: "docker",
     iconAlt: "Docker logo",
   },
   {
     name: "Node.js",
-    iconUrl:
-      "https://lh3.googleusercontent.com/aida-public/AB6AXuAKJYbEfI5iVmrINcdL93c6-28DTE1P5IyNXFS4uyDqK16ShHIXkqolDkqygBJ14B1mcKQyrtBikals4j_veKyGSgaTjcFpu7_gfJXVDEH1Kv9qrIhNOPrUayZxLOg_UCacxfShZ7d7N5U3kzLs1--AHCoKtPgTlFSS3t9QdONeak2LkHIg_JcSGJ7L4HYwb5Uf092MPxwumpnq06SGOdoNGfUF_2EGBog3s9v-fMPvx5AcHkeGWMo5Abe_2EW97UgxrUmgj2uI_7E",
+    iconUrl: "nodedotjs",
     iconAlt: "Node.js logo",
   },
   {
     name: "PostgreSQL",
-    iconUrl:
-      "https://lh3.googleusercontent.com/aida-public/AB6AXuB4nUgzlOqWqYvOwXzPyAamBtiAzb5x9KL85lt2GFfadu_HEME4JJrg_-tJJqWcYgDf7m9gsfiXRGRoJSlSxRAUDsXQcbIhNHNqLTI0H9e57h4qRjjl22kHMeknsPfDWKLNCdCWKfhmSQWSqAOly6eOLIFAMRqDRnzq1pSqNTWtCzDURC5UoZ69iINRyJyRgfA9cJkH_KO9f-tKOoAPgb7BMCuerO7QSXTMvVJ2U0MMAzCUXgCNbefkMg0hlmIJgvZHXfIuyw-h97Y",
+    iconUrl: "postgresql",
     iconAlt: "PostgreSQL logo",
   },
   {
     name: "Tailwind",
-    iconUrl:
-      "https://lh3.googleusercontent.com/aida-public/AB6AXuC533f-CEcEKCWAKwHkCOseg8KHRbkJrPF2yi5RZWovJLJ-pmGKrXzi3tr8IqR47w0ngkT2PHaA7WlIY14iqk2jJuozsIAPx5sMIzeCNW9UW7si0qhs2lDL-CXeInJuMb-WtVXb01jPtcbVPLXUWBjfvMzH69vLMaTnWYexC3Bhj4unfYoY3EdkOVXmuXreOAd3EOS3RX4WgyNpI_V6FtrPU8Viyf4eEuM9MG9SPlhnJP8CWOOHNxZxw2jVr0vexKqJsXW7pzgXLgM",
+    iconUrl: "tailwindcss",
     iconAlt: "Tailwind CSS logo",
   },
   {
     name: "Ethers.js",
-    iconUrl:
-      "https://lh3.googleusercontent.com/aida-public/AB6AXuC6nQfR3-pSA6IgX46gA_OLwmQ05st0OagTsQf7tY_lyv7BcTe39CjsrMVok7FAtCMvwDxWWbayjRL0kLTnR0VBDNLIDN1rIvbpAwLR0CgeUTNubLFTpGIz8McjB5yQmmzM8pQE1wl7jG57EzUq5ydvhbq6uei93W9gtFyo--BSGUUVR_TUqLH2v3az2Gh6f1zCfxIJprvOGkEPVurPc3wG8Z9_MfWbOjDa23dDU8-StFJSMZzpIuWQDEpbfe6d5gOUnEnlYifrIEQ",
+    iconUrl: "ethereum",
     iconAlt: "Ethers.js logo",
   },
   {
     name: "AWS",
-    iconUrl:
-      "https://lh3.googleusercontent.com/aida-public/AB6AXuA8sRn1P74Wr8fzRbmILqxuPi3RqLy606BnvHRsHmm-nACjWGJW-4iPdrrRKC05RynPZdA3SUEYdNkvh8DMVw1VZt5FmY_Wm-M-aLhSuhO06GVdvG3ehMvep812ogq_cEuYqZ-oTtmB27uq2Mnc6T_jfZWQVTP0kVKZSj4pba-hJV4IT2kzb6H2w3NGca_wSS90joSpner68hxmexYegkjnEr-DVbFU1o3GBS9mv3WN_fb2QxkrcfmRJNM2ihtcoerez9cu4hAF_W8",
+    iconUrl: "amazonaws",
     iconAlt: "AWS logo",
   },
   {
     name: "Heroku",
-    iconUrl:
-      "https://cdn.simpleicons.org/heroku/430098",
+    iconUrl: "heroku",
     iconAlt: "Heroku logo",
   },
   {
     name: "Cloudinary",
-    iconUrl:
-      "https://res.cloudinary.com/cloudinary/image/upload/c_scale,w_200/v1/logo/for_white_bg/cloudinary_icon_blue.png",
+    iconUrl: "cloudinary",
     iconAlt: "Cloudinary logo",
+  },
+  {
+    name: "Rust",
+    iconUrl: "rust",
+    iconAlt: "Rust logo",
+  },
+  {
+    name: "Bash",
+    iconUrl: "gnubash",
+    iconAlt: "Bash logo",
+  },
+  {
+    name: "C",
+    iconUrl: "c",
+    iconAlt: "C logo",
   },
 ];
 
