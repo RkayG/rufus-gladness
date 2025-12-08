@@ -210,5 +210,34 @@ export const allProjects: Project[] = [
     roleDescription:
       "Designed and developed the complete Chrome extension including ad detection algorithms, TMDb API integration, interactive movie cards, popup interface, and watchlist management system with Chrome Storage Sync.",
   },
+  {
+    id: "11",
+    title: "OH Health + Pharmacy Website",
+    description:
+      "A modern, ultra-sleek pharmacy website built with Next.js, TypeScript, and Tailwind CSS. This static site showcases all pharmacy services and enables online booking.",
+    imageUrl:
+      "https://res.cloudinary.com/dxbbl7nve/image/upload/v1765188321/oh-pharma-website_bdwep4.png",
+    imageAlt: "OH Health + Pharmacy website showing modern design with glassmorphism effects",
+    technologies: [
+      "Next.js 16",
+      "TypeScript",
+      "Tailwind CSS",
+      "React Icons",
+      "App Router",
+      "Static Site Generation",
+    ],
+    category: "Web App",
+    liveDemoUrl: "#",
+    githubUrl: "#",
+    slug: "oh-health-pharmacy",
+    galleryImages: [
+      "https://res.cloudinary.com/dxbbl7nve/image/upload/v1765188321/oh-pharma-website_bdwep4.png",
+    ],
+    overview:
+      "A modern, ultra-sleek pharmacy website built with Next.js, TypeScript, and Tailwind CSS. This static site showcases all pharmacy services and enables online booking. The website features an ultra-modern UI with glassmorphism effects and smooth animations, fully responsive design optimized for all devices, 70+ service pages covering all pharmacy services, service filtering and search functionality, online booking integration with external booking platforms, component-based architecture for easy maintenance, and static site generation for fast loading and easy deployment.",
+    role: "Designer & Developer",
+    roleDescription:
+      "Designed and developed the OH Health+ Pharmacy website with a focus on modern UI/UX, responsive design, and optimal performance using Next.js static site generation.",
+  },
 ];
 

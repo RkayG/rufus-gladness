@@ -48,8 +48,8 @@ export default async function ProjectDetailPage({
 
   const galleryImages = project.galleryImages || defaultGalleryImages;
   const overview = project.overview || defaultOverview;
-  const challenges = project.challenges || defaultChallenges;
-  const results = project.results || defaultResults;
+  const challenges = project.challenges;
+  const results = project.results;
   const role = project.role || defaultRole;
   const roleDescription = project.roleDescription || defaultRoleDescription;
 
@@ -133,30 +133,34 @@ export default async function ProjectDetailPage({
                   </p>
                 </section>
 
-                <section>
-                  <h2 className="font-handwriting text-4xl font-bold text-[#5D4037] dark:text-[#8D6E63] mb-4">
-                    Challenges & Solutions
-                  </h2>
-                  <div className="space-y-4">
-                    {challenges.map((challenge, index) => (
-                      <p
-                        key={index}
-                        className="text-base leading-relaxed text-[#333333]/90 dark:text-[#E0E0E0]/90 font-body"
-                      >
-                        {challenge}
-                      </p>
-                    ))}
-                  </div>
-                </section>
+                {challenges && challenges.length > 0 && (
+                  <section>
+                    <h2 className="font-handwriting text-4xl font-bold text-[#5D4037] dark:text-[#8D6E63] mb-4">
+                      Challenges & Solutions
+                    </h2>
+                    <div className="space-y-4">
+                      {challenges.map((challenge, index) => (
+                        <p
+                          key={index}
+                          className="text-base leading-relaxed text-[#333333]/90 dark:text-[#E0E0E0]/90 font-body"
+                        >
+                          {challenge}
+                        </p>
+                      ))}
+                    </div>
+                  </section>
+                )}
 
-                <section>
-                  <h2 className="font-handwriting text-4xl font-bold text-[#5D4037] dark:text-[#8D6E63] mb-4">
-                    Results & Impact
-                  </h2>
-                  <p className="text-base leading-relaxed text-[#333333]/90 dark:text-[#E0E0E0]/90 font-body">
-                    {results}
-                  </p>
-                </section>
+                {results && (
+                  <section>
+                    <h2 className="font-handwriting text-4xl font-bold text-[#5D4037] dark:text-[#8D6E63] mb-4">
+                      Results & Impact
+                    </h2>
+                    <p className="text-base leading-relaxed text-[#333333]/90 dark:text-[#E0E0E0]/90 font-body">
+                      {results}
+                    </p>
+                  </section>
+                )}
               </div>
 
               {/* Sidebar */}
