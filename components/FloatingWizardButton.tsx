@@ -1,72 +1,20 @@
 "use client";
 
-import { useState, useEffect } from "react";
 import Link from "next/link";
 
 export function FloatingWizardButton() {
-  const [isExpanded, setIsExpanded] = useState(false);
-  const [isLargeDevice, setIsLargeDevice] = useState(false);
-
-  useEffect(() => {
-    // Check if device is large (lg breakpoint: 1024px)
-    const checkDeviceSize = () => {
-      setIsLargeDevice(window.innerWidth >= 1024);
-    };
-
-    checkDeviceSize();
-    window.addEventListener("resize", checkDeviceSize);
-
-    // Auto-expand/collapse on large devices only
-    if (isLargeDevice) {
-      // Start collapsed on large devices
-      setIsExpanded(false);
-
-      // Auto-expand every 15 seconds, show for 5 seconds, then collapse
-      const expandInterval = setInterval(() => {
-        setIsExpanded(true);
-        setTimeout(() => {
-          setIsExpanded(false);
-        }, 5000);
-      }, 15000);
-
-      return () => {
-        clearInterval(expandInterval);
-        window.removeEventListener("resize", checkDeviceSize);
-      };
-    }
-
-    return () => {
-      window.removeEventListener("resize", checkDeviceSize);
-    };
-  }, [isLargeDevice]);
-
   return (
     <Link
       href="/co-founder"
-      className={`fixed bottom-16 right-8 z-30 flex animate-subtle-pulse cursor-pointer items-center gap-3 rounded-full bg-[#8D7B68] dark:bg-primary px-3 py-3 sm:px-4 text-white shadow-lg transition-all duration-300 hover:scale-110 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-background-light dark:focus:ring-offset-background-dark focus:ring-[#8D7B68] dark:focus:ring-primary touch-manipulation ${
-        isLargeDevice && !isExpanded ? "lg:px-3" : ""
-      }`}
+      className="faq-button fixed bottom-16 right-8 md:right-16 z-30"
       aria-label="Open Cofounder Wizard"
-      onMouseEnter={() => isLargeDevice && setIsExpanded(true)}
-      onMouseLeave={() => {
-        // On large devices, collapse on mouse leave (auto-expand will handle periodic expansion)
-        if (isLargeDevice) {
-          setIsExpanded(false);
-        }
-      }}
     >
-      <span className="material-symbols-outlined !text-2xl">lightbulb</span>
-      <span
-        className={`text-sm font-bold transition-all duration-300 ${
-          isLargeDevice
-            ? isExpanded
-              ? "opacity-100 max-w-[200px]"
-              : "opacity-0 max-w-0 overflow-hidden"
-            : "hidden sm:inline"
-        }`}
-      >
-        Want a technical cofounder?
-      </span>
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512">
+        <path
+          d="M80 160c0-35.3 28.7-64 64-64h32c35.3 0 64 28.7 64 64v3.6c0 21.8-11.1 42.1-29.4 53.8l-42.2 27.1c-25.2 16.2-40.4 44.1-40.4 74V320c0 17.7 14.3 32 32 32s32-14.3 32-32v-1.4c0-8.2 4.2-15.8 11-20.2l42.2-27.1c36.6-23.6 58.8-64.1 58.8-107.7V160c0-70.7-57.3-128-128-128H144C73.3 32 16 89.3 16 160c0 17.7 14.3 32 32 32s32-14.3 32-32zm80 320a40 40 0 1 0 0-80 40 40 0 1 0 0 80z"
+        ></path>
+      </svg>
+      <span className="tooltip">Want a technical cofounder?</span>
     </Link>
   );
 }

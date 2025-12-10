@@ -20,19 +20,19 @@ export default function Home() {
               <div className="flex flex-col md:flex-row gap-4 justify-center">
                 <Link
                   href="/about"
-                  className="inline-flex items-center justify-center rounded-lg h-12 px-6 bg-[#6b4a49] dark:bg-[#cf6417] text-white text-base font-bold hover:opacity-90 transition-opacity"
+                  className="inline-flex md:w-auto w-fit md:px-6 px-4 items-center justify-center rounded-lg h-12 px-6 bg-[#6b4a49] dark:bg-[#cf6417] text-white text-base font-bold hover:opacity-90 transition-opacity"
                 >
                   View About Me
                 </Link>
                 <Link
                   href="/skills"
-                  className="inline-flex items-center justify-center rounded-lg h-12 px-6 bg-[#6b4a49] dark:bg-[#cf6417] text-white text-base font-bold hover:opacity-90 transition-opacity"
+                  className="inline-flex md:w-auto w-fit md:px-6 px-4 items-center justify-center rounded-lg h-12 px-6 bg-[#6b4a49] dark:bg-[#cf6417] text-white text-base font-bold hover:opacity-90 transition-opacity"
                 >
                   View Skills
                 </Link>
                 <Link
                   href="/projects"
-                  className="inline-flex items-center justify-center rounded-lg h-12 px-6 bg-[#6b4a49] dark:bg-[#cf6417] text-white text-base font-bold hover:opacity-90 transition-opacity"
+                  className="inline-flex md:w-auto w-fit md:px-6 px-4 items-center justify-center rounded-lg h-12 px-6 bg-[#6b4a49] dark:bg-[#cf6417] text-white text-base font-bold hover:opacity-90 transition-opacity"
                 >
                   View Projects
                 </Link>
