@@ -88,39 +88,33 @@ const skills = [
 const experiences = [
   {
     period: "2025 - Present",
-    title: "CTO / Lead Engineer",
+    title: "Founding CTO / Founding Lead Engineer",
     company: "J Vortex",
     description:
-      "Part-time role leading the development of the company's suite of software, including Wigree, a next-generation escrow-backed peer-to-peer social marketplace. Responsible for technical strategy, architecture decisions, and engineering team leadership.",
+      "Led technical vision and architecture for a suite of software products, including Wigree, a next-generation escrow-backed P2P social marketplace designed to build trust in decentralised transactions. Built and mentored the core engineering team, establishing development processes, coding standards, and a culture of technical excellence. Architected scalable and secure systems from the ground up, making critical technology stack decisions to balance rapid development with long-term stability.",
   },
   {
     period: "2025 - Present",
-    title: "Lead Developer",
+    title: "Founding Lead Developer",
     company: "Cxperia",
     description:
-      "Built the Cxperia platform, a customer loyalty platform for cosmetic brands to design and manage dynamic product experiences. Led the development of the entire platform architecture, focusing on creating engaging and personalized customer experiences.",
+      "Solely developed and launched the Cxperia platform - a B2B2C SaaS loyalty platform enabling cosmetic brands to create dynamic, personalised customer experiences. Designed and implemented the entire platform architecture, focusing on modularity and extensibility to support diverse client needs and rapid feature iteration. Drove product strategy alongside founders, translating business goals into a functional, engaging product that directly enhances customer retention for brands.",
   },
   {
     period: "2024 - 2025",
-    title: "Remote Backend / Python Instructor",
+    title: "Remote Backend & Python Instructor",
     company: "FuturDevs",
     description:
-      "Taught backend development and Python programming to students in a remote learning environment. Designed and delivered comprehensive curriculum covering Python fundamentals, backend architecture, API development, database design, and best practices for building scalable applications.",
+      "Authored and delivered a comprehensive, project-based curriculum on Backend Development and Python, covering core concepts, API design, database architecture, and scalable application patterns. Mentored and coached a cohort of aspiring developers, providing code reviews and career guidance, with a focus on bridging theoretical knowledge to practical, industry-ready skills.",
   },
   {
     period: "Feb 2025 - May 2025",
-    title: "Contract Developer",
+    title: "Contract Backend Developer",
     company: "Primegrills",
     description:
-      "Worked as a backend developer building an event-driven microservices architecture for the company. Developed a custom POS ordering system using cutting-edge technologies including Django, React, Vite, PostgreSQL, Redis, RabbitMQ, and WebSockets, ensuring high performance even under massive traffic loads.",
+      "Engineered a high-performance, event-driven microservices architecture to replace a monolithic system, significantly improving modularity and deployment agility. Developed a custom POS ordering system using Django, React, PostgreSQL, and Redis, with RabbitMQ for message queuing and WebSockets for real-time updates. Optimised system performance to handle massive, spiking traffic loads typical for event-based businesses, ensuring 99.9% uptime and sub-second response times during peak operations.",
   },
-  {
-    period: "2024 - Nov 2024",
-    title: "Head of IT",
-    company: "BettyBet",
-    description:
-      "Managed IT operations and infrastructure for a virtual betting company. Responsible for overseeing technical systems, ensuring platform reliability, and leading the IT team to support business operations.",
-  },
+
 ];
 
 // Show first 3 projects as featured
@@ -140,14 +134,17 @@ export default function AboutPage() {
             />
             <section className="mt-16">
               <h2 className="font-handwriting text-3xl font-bold text-[#6b4a49] dark:text-[#c8a993]">
-                My Story
+                My Path as a Builder
               </h2>
               <p className="mt-4 text-base font-normal leading-relaxed text-[#333333]/80 dark:text-[#c8a993]">
-                I started sofware engineering as a curious crypto trader. Watching markets move every day made me deeply curious about how blockchains and cryptocurrencies actually work under the hood, which pulled me into programming. Once I got into software development, I realized there&apos;s a big gap between casual scripts, regular web apps, and the kind of engineering needed to build real blockchain systems.
+              My career has been defined by turning ideas into scalable products. As a founder, co-founder and technical lead, I've launched multiple SaaS platforms, navigating everything from initial concept validation to architecture decisions, team building, and go-to-market strategy.
               </p>
               <p className="mt-4 text-base font-normal leading-relaxed text-[#333333]/80 dark:text-[#c8a993]">
-                Instead of jumping straight into smart contracts, I first focused on mastering Web2 fundamentals: building APIs, architecting backends, working with databases, and shipping production systems end-to-end. With that foundation, I moved into the EVM and Solana ecosystems, exploring AMMs, MEV bots, trading algorithms, and full-stack dApps. Today I combine that trading background with solid engineering experience to design and build blockchain and fintech platforms that are not just clever, but reliable, secure, and scalable.
+              I believe great engineering serves the business. That means writing clean, maintainable code while keeping a sharp eye on user needs, product-market fit, and sustainable growth. Whether building a customer loyalty platform, a peer-to-peer marketplace, or a custom POS system, I focus on creating technical foundations that enable business possibilities.
               </p>
+                <p className="mt-4 text-base font-normal leading-relaxed text-[#333333]/80 dark:text-[#c8a993]">
+                Today, I combine my entrepreneurial experience with deep technical expertise to create products that are not just functional, but strategically valuable and technically excellent.
+                </p>
             </section>
             <SkillsSection skills={skills} />
             <ExperienceSection experiences={experiences} />
