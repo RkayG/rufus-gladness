@@ -1,8 +1,28 @@
+"use client";
+
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { ThemeToggle } from "./ThemeToggle";
 import { AnimatedButton } from "./AnimatedButton";
 
 export function Header() {
+  const pathname = usePathname();
+
+  const isActive = (href: string) => {
+    if (href === "/") {
+      return pathname === "/";
+    }
+    return pathname.startsWith(href);
+  };
+
+  const getLinkClassName = (href: string) => {
+    const baseClasses = "text-sm font-medium leading-normal transition-colors";
+    const activeClasses = isActive(href)
+      ? "text-[#6b4a49] dark:text-[#cf6417] font-bold"
+      : "text-[#333333] dark:text-white hover:text-[#4A2E2A] dark:hover:text-[#c8a993]";
+    return `${baseClasses} ${activeClasses}`;
+  };
+
   return (
     <header className="sticky top-0 z-10 flex items-center justify-between whitespace-nowrap border-b border-solid border-[#4A2E2A]/20 dark:border-[#473324] bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-sm py-3">
       <div className="flex items-center gap-4 text-[#4A2E2A] dark:text-white">
@@ -18,37 +38,37 @@ export function Header() {
       <div className="flex items-center gap-4">
         <nav className="hidden items-center gap-9 md:flex">
           <Link
-            className="text-[#333333] dark:text-white text-sm font-medium leading-normal hover:text-[#4A2E2A] dark:hover:text-[#c8a993] transition-colors"
+            className={getLinkClassName("/")}
             href="/"
           >
             Home
           </Link>
           <Link
-            className="text-[#333333] dark:text-white text-sm font-medium leading-normal hover:text-[#4A2E2A] dark:hover:text-[#c8a993] transition-colors"
+            className={getLinkClassName("/about")}
             href="/about"
           >
             About
           </Link>
           <Link
-            className="text-[#333333] dark:text-white text-sm font-medium leading-normal hover:text-[#4A2E2A] dark:hover:text-[#c8a993] transition-colors"
+            className={getLinkClassName("/skills")}
             href="/skills"
           >
             Skills
           </Link>
           <Link
-            className="text-[#333333] dark:text-white text-sm font-medium leading-normal hover:text-[#4A2E2A] dark:hover:text-[#c8a993] transition-colors"
+            className={getLinkClassName("/projects")}
             href="/projects"
           >
             Projects
           </Link>
           <Link
-            className="text-[#333333] dark:text-white text-sm font-medium leading-normal hover:text-[#4A2E2A] dark:hover:text-[#c8a993] transition-colors"
+            className={getLinkClassName("/blog")}
             href="/blog"
           >
             Blog
           </Link>
           {/* <Link
-            className="text-[#333333] dark:text-white text-sm font-medium leading-normal hover:text-[#4A2E2A] dark:hover:text-[#c8a993] transition-colors"
+            className={getLinkClassName("/contact")}
             href="/contact"
           >
             Contact
