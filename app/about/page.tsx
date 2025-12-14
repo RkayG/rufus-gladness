@@ -6,6 +6,7 @@ import { ExperienceSection } from "@/components/ExperienceSection";
 import { ProjectsSection } from "@/components/ProjectsSection";
 import Link from "next/link";
 import { allProjects } from "@/data/projects";
+import { AnimatedButton } from "@/components/AnimatedButton";
 
 const skills = [
   {
@@ -157,12 +158,9 @@ export default function AboutPage() {
                 Interested in collaborating or have a project in mind? I&apos;m
                 always open to new opportunities and challenges.
               </p>
-              <Link
-                href="/projects"
-                className="mt-6 inline-flex min-w-[84px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-12 px-6 bg-[#8D6E63] dark:bg-[#cf6417] text-white text-base font-bold leading-normal tracking-[0.015em] hover:opacity-90 transition-opacity mx-auto"
-              >
-                <span className="truncate">View My Work</span>
-              </Link>
+              <div className="mt-6 flex justify-center">
+                <AnimatedButton href="/projects">View My Work</AnimatedButton>
+              </div>
             </section>
           </main>
         </div>
