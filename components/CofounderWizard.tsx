@@ -4,6 +4,7 @@ import { useState } from "react";
 import { useRouter } from "next/navigation";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
+import { AnimatedButton } from "@/components/AnimatedButton";
 
 interface WizardData {
   "full-name": string;
@@ -116,12 +117,7 @@ export function CofounderWizard() {
                 details and get back to you shortly.
               </p>
               <div className="flex w-full max-w-md flex-col sm:flex-row gap-4">
-                <a
-                  href="/"
-                  className="flex min-w-[84px] flex-1 cursor-pointer items-center justify-center overflow-hidden rounded-lg h-12 px-6 bg-primary text-white text-base font-bold leading-normal tracking-[0.015em] hover:opacity-90 transition-opacity"
-                >
-                  <span className="truncate">Return to Homepage</span>
-                </a>
+                <AnimatedButton href="/">Return to Homepage</AnimatedButton>
                 <a
                   href="/projects"
                   className="flex min-w-[84px] flex-1 cursor-pointer items-center justify-center overflow-hidden rounded-lg h-12 px-6 bg-primary/20 text-primary dark:bg-primary/30 dark:text-primary text-base font-bold leading-normal tracking-[0.015em] hover:bg-primary/30 dark:hover:bg-primary/40 transition-colors"
@@ -297,21 +293,15 @@ export function CofounderWizard() {
 
                     {/* Action Buttons */}
                     <div className="mt-6 flex flex-col-reverse items-center justify-between gap-4 border-t border-black/10 pt-8 dark:border-white/10 sm:flex-row">
-                      <button
-                        onClick={handlePrevious}
-                        className="flex h-11 w-full items-center justify-center gap-2 rounded-lg border border-black/20 px-6 text-sm font-semibold hover:bg-black/5 dark:border-white/20 dark:hover:bg-white/5 sm:w-auto"
-                      >
-                        <span className="material-symbols-outlined">arrow_back</span>
+                      <AnimatedButton onClick={handlePrevious} variant="ghost" direction="left">
                         Previous
-                      </button>
-                      <button
+                      </AnimatedButton>
+                      <AnimatedButton
                         onClick={handleSubmit}
-                        disabled={!isConfirmed}
-                        className="flex h-11 w-full items-center justify-center gap-2 rounded-lg bg-primary px-6 text-sm font-semibold text-white hover:bg-primary/90 disabled:cursor-not-allowed disabled:opacity-50 sm:w-auto"
+                        className={!isConfirmed ? "opacity-50 cursor-not-allowed pointer-events-none" : ""}
                       >
                         Submit Application
-                        <span className="material-symbols-outlined">send</span>
-                      </button>
+                      </AnimatedButton>
                     </div>
                   </div>
                 </div>
@@ -526,44 +516,26 @@ export function CofounderWizard() {
                   {/* Action Buttons */}
                   <div className={`mt-4 flex items-center justify-between ${currentStep === 3 ? 'mt-12 border-t border-primary/20 dark:border-primary/40 pt-8' : 'pt-6 border-t border-[#D7CCC8] dark:border-[#473324]'} ${currentStep === 1 ? 'flex-col-reverse gap-4 sm:flex-row sm:justify-end' : ''}`}>
                     {currentStep === 1 ? (
-                      <button
-                        onClick={handleCancel}
-                        className="flex h-12 cursor-pointer items-center justify-center overflow-hidden rounded-lg border border-[#D7CCC8] bg-transparent px-6 text-sm font-bold text-text-light/80 transition-colors hover:bg-[#EFEBE9] dark:border-[#473324] dark:text-text-dark/80 dark:hover:bg-[#2c2017]/50"
-                      >
-                        <span className="truncate">Cancel</span>
-                      </button>
+                      <AnimatedButton onClick={handleCancel} variant="ghost" direction="left">
+                        Cancel
+                      </AnimatedButton>
                     ) : (
-                      <button
-                        onClick={handlePrevious}
-                        className={`flex items-center gap-2 rounded-lg px-6 py-3 text-base font-semibold leading-normal transition-colors ${currentStep === 3
-                            ? "border-2 border-primary/30 text-primary/90 hover:bg-primary/10 dark:border-primary/50 dark:text-primary/80 dark:hover:bg-primary/20"
-                            : "text-text-light dark:text-text-dark hover:bg-primary/10 dark:hover:bg-primary/20"
-                          }`}
-                        type="button"
-                      >
-                        <span className="material-symbols-outlined">arrow_back</span>
+                      <AnimatedButton onClick={handlePrevious} variant="ghost" direction="left">
                         Previous
-                      </button>
+                      </AnimatedButton>
                     )}
-                    <button
+                    <AnimatedButton
                       onClick={handleNext}
-                      disabled={
-                        (currentStep === 1 && (!formData["full-name"] || !formData.email)) ||
+                      className={
+                        ((currentStep === 1 && (!formData["full-name"] || !formData.email)) ||
                         (currentStep === 2 && (!formData["idea-description"] || !formData["background-role"])) ||
-                        (currentStep === 3 && (!formData["stage-of-idea"] || !formData.timeline || formData["technical-needs"].length === 0 || !formData["equity-compensation"]))
+                        (currentStep === 3 && (!formData["stage-of-idea"] || !formData.timeline || formData["technical-needs"].length === 0 || !formData["equity-compensation"])))
+                          ? "opacity-50 cursor-not-allowed pointer-events-none"
+                          : ""
                       }
-                      className={`flex items-center gap-2 rounded-lg bg-primary px-6 py-3 text-base font-semibold leading-normal text-white hover:bg-primary/90 transition-colors disabled:opacity-50 disabled:cursor-not-allowed ${currentStep === 1 ? 'h-12 text-sm' : ''}`}
-                      type="button"
                     >
-                      {currentStep === 1 ? (
-                        <span className="truncate">Next</span>
-                      ) : (
-                        <>
-                          {currentStep === totalSteps ? "Submit" : "Next"}
-                          <span className="material-symbols-outlined">arrow_forward</span>
-                        </>
-                      )}
-                    </button>
+                      {currentStep === 1 ? "Next" : currentStep === totalSteps ? "Submit" : "Next"}
+                    </AnimatedButton>
                   </div>
                 </div>
               </div>
