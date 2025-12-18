@@ -393,5 +393,43 @@ export const allProjects: Project[] = [
     roleDescription:
       "Designed and developed the OH Health+ Pharmacy website with a focus on modern UI/UX, responsive design, and optimal performance using Next.js static site generation.",
   },
+  {
+    id: "8",
+    title: "Web3Fruity",
+    description:
+      "A comprehensive web3 income discovery platform that curates airdrops, token farming opportunities, reward-for-task platforms, crypto news, and tier-based web3 education. Helping users discover and participate in the latest earning opportunities in the decentralized ecosystem.",
+    imageUrl:
+      "https://res.cloudinary.com/dxbbl7nve/image/upload/v1766085601/Giy-I4DWgAACM1m_l8y0nx.jpg",
+    imageAlt: "Web3Fruity web3 income discovery platform showing airdrops, games, and crypto news",
+    technologies: [
+      "React",
+      "Next.js",
+      "Node.js",
+      "Express",
+      "Tailwind CSS",
+      "Contentful CMS",
+      "RESTful API",
+      "Blockchain Integration",
+    ],
+    category: "Web App",
+    liveDemoUrl: "https://web3fruity.com",
+    githubUrl: "",
+    slug: "web3fruity",
+    galleryImages: [
+      "https://res.cloudinary.com/dxbbl7nve/image/upload/v1766085601/Giy-I4DWgAACM1m_l8y0nx.jpg",
+    ],
+    overview:
+      "Web3Fruity is a comprehensive web3 income discovery platform designed to help users navigate the decentralized economy. The platform curates the latest earning opportunities including airdrops, play-to-earn games, reward-for-task platforms, token farming opportunities, and cryptocurrency news. Built with a modern tech stack integrated with Contentful CMS, Web3Fruity provides users with curated, up-to-date information, detailed token analytics, and tier-based educational content to help them safely participate in the web3 ecosystem. The platform leverages Contentful's headless CMS architecture for flexible content management, allowing for easy updates and curation of opportunities without code changes, while maintaining a RESTful API backend for seamless data delivery.",
+    challenges: [
+      "Integrating Contentful CMS as a headless content management system to enable non-technical team members to curate and update web3 opportunities (airdrops, games, tasks, news) without requiring code deployments. The solution required designing flexible content models, implementing efficient Contentful API integration, and building a robust data synchronization layer between the CMS and the frontend application.",
+      "Creating a user-friendly interface that presents complex web3 information (token metrics, blockchain data, reward structures) in an accessible way. This required designing intuitive data visualizations, clear categorization systems, and progressive disclosure patterns that help both beginners and experienced users navigate the platform effectively.",
+      "Implementing a tier-based education system that scales from beginner to advanced web3 concepts using Contentful's content modeling capabilities. The challenge was structuring educational content in the CMS that builds progressively while remaining engaging and actionable, requiring careful content architecture and flexible content relationships within Contentful.",
+      "Ensuring platform security and user safety when directing users to external web3 platforms and opportunities. This required implementing verification systems, user warnings, and safety guidelines within the CMS workflow to protect users from scams and malicious projects in the decentralized space, while maintaining content editor flexibility.",
+    ],
+    
+    role: "Full-Stack Developer & Platform Architect",
+    roleDescription:
+      "Designed and developed the complete Web3Fruity platform including frontend interface, RESTful API backend, and Contentful CMS integration. Architected the headless CMS content models for airdrops, games, reward tasks, token farms, and crypto news, enabling efficient content management. Built the API layer that synchronizes Contentful content with the frontend application and implemented the tier-based education content architecture within the CMS.",
+  },
 ];
 

@@ -18,7 +18,7 @@ export default function Home() {
               <p className="mt-4 text-subtle-light dark:text-subtle-dark mb-6 text-lg">
                 Welcome to my portfolio
               </p>
-              <div className="flex flex-col md:flex-row gap-4 justify-center">
+              <div className="flex flex-col w-fit mx-auto md:flex-row gap-4 justify-center">
                 <AnimatedButton href="/about">View About Me</AnimatedButton>
                 <AnimatedButton href="/skills">View Skills</AnimatedButton>
                 <AnimatedButton href="/projects">View Projects</AnimatedButton>
