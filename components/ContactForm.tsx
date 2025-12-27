@@ -12,9 +12,7 @@ export function ContactForm() {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    // Handle form submission here
-    console.log("Form submitted:", formData);
-    // You can add API call here
+    // TODO: Handle form submission here
   };
 
   const handleChange = (
@@ -83,9 +81,9 @@ export function ContactForm() {
         />
       </div>
       <div className="flex justify-center w-fit mx-auto">
-      <AnimatedButton type="submit">
-        Send Message
-      </AnimatedButton>
+        <AnimatedButton type="submit">
+          Send Message
+        </AnimatedButton>
       </div>
     </form>
   );

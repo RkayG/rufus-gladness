@@ -146,7 +146,7 @@ export const allProjects: Project[] = [
       'https://res.cloudinary.com/dxbbl7nve/image/upload/v1765683621/Screenshot_187_lcksos.png',
       'https://res.cloudinary.com/dxbbl7nve/image/upload/v1765683619/Screenshot_188_d83kly.png',
       'https://res.cloudinary.com/dxbbl7nve/image/upload/v1765683617/Screenshot_193_bdgmki.png',
-    
+
     ],
     overview:
       "Cxperia is a comprehensive digital experience platform that enables beauty and cosmetic brands to create immersive, interactive product experiences. The platform allows brands to generate QR codes for their products, create step-by-step tutorials and routines, and collect valuable customer feedback and analytics. Built with a mobile-first approach, Cxperia provides brands with tools to enhance customer engagement, improve product education, and build stronger brand-customer relationships through digital experiences.",
@@ -207,7 +207,7 @@ export const allProjects: Project[] = [
     roleDescription:
       "Designed and developed the complete OnRoute platform including mobile app, admin dashboard, real-time WebSocket infrastructure, GPS validation system, and analytics engine.",
   },
-  
+
   {
     id: "3",
     title: "SmartMention",
@@ -257,7 +257,7 @@ export const allProjects: Project[] = [
     roleDescription:
       "Built the crawler engine and keyword monitoring system that tracks mentions, filters into topics, extracts leads, crises, trends, and anomalies. Implemented sentiment analysis and scheduler systems. Assisted the team in building the frontend analytics dashboard.",
   },
- 
+
   {
     id: "4",
     title: "Portfolio Website",
@@ -291,7 +291,7 @@ export const allProjects: Project[] = [
     id: "5",
     title: "Solana Liquidation Bot",
     description:
-      "A production-ready Solana liquidation bot with flash loan integration, supporting Solend, MarginFi, and Kamino lending protocols with zero-capital operation.",
+      "A Solana liquidation bot with flash loan integration, supporting Solend, MarginFi, and Kamino lending protocols with zero-capital operation.",
     imageUrl:
       "https://lh3.googleusercontent.com/aida-public/AB6AXuDNRyX4RMuo6NZb023axJ_9QdCXm3nbJ4YIl7tnh3jeFnwZNWbpdSLOXwViIn0dTfaRr13z-mJ8V5O8aiqsrXpPbcoxhSVIWV7N7E_jAwKF1_-ptUdajYI4Fcy9Yod9GanyQB6uHTcauyYsRM0aGegLB1GYrkWES3ZM9M2jW2cgMMcA8uGhAj0XuwrYnjZh4eO7kp2whWGZ3AmGQzHe1juuLFUUU8KElDMW0S_a8DohtaaMk0LAR8rrdg0tA2TpV1EGbfXQJmMTVYw",
     imageAlt: "Solana liquidation bot architecture showing protocol integrations",
@@ -302,19 +302,15 @@ export const allProjects: Project[] = [
     slug: "solana-liquidation-bot",
     galleryImages: [
       "https://lh3.googleusercontent.com/aida-public/AB6AXuDNRyX4RMuo6NZb023axJ_9QdCXm3nbJ4YIl7tnh3jeFnwZNWbpdSLOXwViIn0dTfaRr13z-mJ8V5O8aiqsrXpPbcoxhSVIWV7N7E_jAwKF1_-ptUdajYI4Fcy9Yod9GanyQB6uHTcauyYsRM0aGegLB1GYrkWES3ZM9M2jW2cgMMcA8uGhAj0XuwrYnjZh4eO7kp2whWGZ3AmGQzHe1juuLFUUU8KElDMW0S_a8DohtaaMk0LAR8rrdg0tA2TpV1EGbfXQJmMTVYw",
-      "https://lh3.googleusercontent.com/aida-public/AB6AXuAGWzrzVyOaV-6GhREOmfJqRhlez0d2cjEMVMIBe2wXMWt_WyOjSy3jdsdzFxcmP5OVZ4jacODopsr5B_MnfGkaIaCK2BkMKyH2oJ-rH4C3zd8G_tyzk1cuKgmsaJfFu_4G_K6UKsyyW2KWLIPnC_zSQJ2F0QTpKgzPFUf_-zrFVqCqOgCW7Wqh0fzhfZOXCKGvfRrnSYkwYC9lmkMZB-t_VoMSVMX-Sh2Z49jsk3XsszmGnnLswMLojSgVuFvFN3FJRD-xTSe346g",
-      "https://lh3.googleusercontent.com/aida-public/AB6AXuBGYg8KRBfhnWex9PfaBYROuTTOHLZNTzi-CpYn-8_96YU5KNJQJ0ciiI7szujMheNX1vJctp2-WLDzE1ez0U4o29XybdWmyUUPWPwyifuV6iZxsEH4ztdqZ81_8M8jASx0sCyiuwKWF8jzqvHeTwt9d59eNeAfpWkO3QB02LKYjvjlJi-t_0n48YQh8gPVOK2sUYsgi5H-NlBkD_vA8d9foh3aBR54MJfCX7yhc1pDq-HwgYt99u2Ou6-qEp5_ryIKzcOTKgTVT6Q",
     ],
     overview:
-      "A production-ready Solana liquidation bot designed for zero-capital operation using flash loans. The bot monitors multiple lending protocols (Solend, MarginFi, Kamino) simultaneously, identifying liquidation opportunities and executing profitable trades within Solana's 400ms block times. Built with Rust for maximum performance, the system includes comprehensive risk management, transaction simulation, and real-time monitoring to ensure safe and profitable operations in a highly competitive environment.",
+      "A Solana liquidation bot designed for zero-capital operation using flash loans. The bot monitors multiple lending protocols (Solend, MarginFi, Kamino) simultaneously, identifying liquidation opportunities and executing profitable trades within Solana's 400ms block times. Built with Rust for maximum performance, the system includes comprehensive risk management, transaction simulation, and real-time monitoring to ensure safe and profitable operations in a highly competitive environment.",
     challenges: [
-      "Optimizing for Solana's 400ms block times required building an ultra-fast monitoring and execution system. The solution involved implementing efficient on-chain data parsing, priority queues for opportunity ranking, and parallel protocol monitoring to detect and act on opportunities before competitors.",
+      "Optimizing for Solana's 400ms block times required building an ultra-fast monitoring and execution system. The solution involved implementing efficient on-chain data parsing, priority queues for opportunity ranking, and parallel protocol monitoring to detect and act on opportunities fast.",
       "Implementing flash loan integration across multiple protocols (Solend, MarginFi, Kamino) with different interfaces and requirements. This required creating a unified abstraction layer that handles protocol-specific differences while maintaining type safety and ensuring atomic transaction execution.",
-      "Building a robust simulation engine that accurately predicts transaction outcomes before execution. The challenge was accounting for slippage, gas costs, and market movements between simulation and execution, requiring sophisticated profit calculation algorithms and safety margins.",
       "Designing comprehensive risk management systems including daily loss limits, circuit breakers, and position size controls. This required implementing stateful tracking across bot restarts, configurable thresholds, and automatic shutdown mechanisms to protect capital.",
     ],
-    results:
-      "The bot successfully operates in production with zero capital requirements, using flash loans exclusively for all operations. It demonstrates high reliability with comprehensive safety checks, achieving a 15-30% success rate on detected opportunities. The system processes 5-20 liquidations daily with average profits of $30-80 per execution, showcasing the effectiveness of the multi-protocol monitoring and fast execution architecture. The project demonstrates advanced Solana development skills, systems programming expertise in Rust, and deep understanding of DeFi protocols and financial risk management.",
+
     role: "Blockchain Developer & Systems Architect",
     roleDescription:
       "Designed and implemented the complete liquidation bot architecture, including protocol integrations, flash loan handling, risk management systems, and real-time monitoring infrastructure.",
@@ -421,12 +417,10 @@ export const allProjects: Project[] = [
     overview:
       "Web3Fruity is a comprehensive web3 income discovery platform designed to help users navigate the decentralized economy. The platform curates the latest earning opportunities including airdrops, play-to-earn games, reward-for-task platforms, token farming opportunities, and cryptocurrency news. Built with a modern tech stack integrated with Contentful CMS, Web3Fruity provides users with curated, up-to-date information, detailed token analytics, and tier-based educational content to help them safely participate in the web3 ecosystem. The platform leverages Contentful's headless CMS architecture for flexible content management, allowing for easy updates and curation of opportunities without code changes, while maintaining a RESTful API backend for seamless data delivery.",
     challenges: [
-      "Integrating Contentful CMS as a headless content management system to enable non-technical team members to curate and update web3 opportunities (airdrops, games, tasks, news) without requiring code deployments. The solution required designing flexible content models, implementing efficient Contentful API integration, and building a robust data synchronization layer between the CMS and the frontend application.",
-      "Creating a user-friendly interface that presents complex web3 information (token metrics, blockchain data, reward structures) in an accessible way. This required designing intuitive data visualizations, clear categorization systems, and progressive disclosure patterns that help both beginners and experienced users navigate the platform effectively.",
+      "Integrating Contentful CMS as a headless content management system to enable enable curating and updating web3 opportunities (airdrops, games, tasks, news) without requiring code deployments. The solution required designing flexible content models, implementing efficient Contentful API integration, and building a robust data synchronization layer between the CMS and the frontend application.",
       "Implementing a tier-based education system that scales from beginner to advanced web3 concepts using Contentful's content modeling capabilities. The challenge was structuring educational content in the CMS that builds progressively while remaining engaging and actionable, requiring careful content architecture and flexible content relationships within Contentful.",
-      "Ensuring platform security and user safety when directing users to external web3 platforms and opportunities. This required implementing verification systems, user warnings, and safety guidelines within the CMS workflow to protect users from scams and malicious projects in the decentralized space, while maintaining content editor flexibility.",
     ],
-    
+
     role: "Full-Stack Developer & Platform Architect",
     roleDescription:
       "Designed and developed the complete Web3Fruity platform including frontend interface, RESTful API backend, and Contentful CMS integration. Architected the headless CMS content models for airdrops, games, reward tasks, token farms, and crypto news, enabling efficient content management. Built the API layer that synchronizes Contentful content with the frontend application and implemented the tier-based education content architecture within the CMS.",

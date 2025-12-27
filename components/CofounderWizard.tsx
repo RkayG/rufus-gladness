@@ -85,9 +85,7 @@ export function CofounderWizard() {
 
   const handleSubmit = () => {
     if (isConfirmed) {
-      // Handle form submission here
-      console.log("Form submitted:", formData);
-      // You can add API call here
+      // TODO: Handle form submission here
       setIsSubmitted(true);
     }
   };
@@ -528,8 +526,8 @@ export function CofounderWizard() {
                       onClick={handleNext}
                       className={
                         ((currentStep === 1 && (!formData["full-name"] || !formData.email)) ||
-                        (currentStep === 2 && (!formData["idea-description"] || !formData["background-role"])) ||
-                        (currentStep === 3 && (!formData["stage-of-idea"] || !formData.timeline || formData["technical-needs"].length === 0 || !formData["equity-compensation"])))
+                          (currentStep === 2 && (!formData["idea-description"] || !formData["background-role"])) ||
+                          (currentStep === 3 && (!formData["stage-of-idea"] || !formData.timeline || formData["technical-needs"].length === 0 || !formData["equity-compensation"])))
                           ? "opacity-50 cursor-not-allowed pointer-events-none"
                           : ""
                       }

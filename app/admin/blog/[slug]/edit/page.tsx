@@ -35,7 +35,7 @@ export default function EditBlogPostPage() {
     setTitle(post.title);
     setContent(post.content || "");
     setAuthor(post.author?.name || "Rufus Gladness");
-    
+
     // Convert date from "October 26, 2023" to "2023-10-26"
     let dateValue = new Date().toISOString().split("T")[0];
     if (post.date) {
@@ -56,27 +56,18 @@ export default function EditBlogPostPage() {
 
   const handleUpdate = () => {
     // Update post logic
-    console.log("Updating post...", {
-      title,
-      content,
-      author,
-      publicationDate,
-      tags,
-      status,
-    });
-    // In a real app, this would call an API
+
+    // TODO: this would call an actual API
     router.push("/admin/blog");
   };
 
   const handleUnpublish = () => {
     setStatus("Draft");
-    console.log("Unpublishing post...");
   };
 
   const handleDelete = () => {
     if (confirm("Are you sure you want to delete this post?")) {
-      console.log("Deleting post...");
-      // In a real app, this would call an API
+      //  this would call an actual API
       router.push("/admin/blog");
     }
   };
@@ -128,11 +119,10 @@ export default function EditBlogPostPage() {
               </div>
               <div className="flex items-center gap-2">
                 <span
-                  className={`inline-flex items-center rounded-full px-3 py-1 text-sm font-medium ${
-                    status === "Published"
-                      ? "bg-green-100 dark:bg-green-900 text-green-800 dark:text-green-200"
-                      : "bg-gray-100 dark:bg-gray-800 text-gray-800 dark:text-gray-200"
-                  }`}
+                  className={`inline-flex items-center rounded-full px-3 py-1 text-sm font-medium ${status === "Published"
+                    ? "bg-green-100 dark:bg-green-900 text-green-800 dark:text-green-200"
+                    : "bg-gray-100 dark:bg-gray-800 text-gray-800 dark:text-gray-200"
+                    }`}
                 >
                   {status}
                 </span>

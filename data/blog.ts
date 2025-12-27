@@ -1,7 +1,7 @@
 import { BlogPost } from "@/types/blog";
 
 export const allBlogPosts: BlogPost[] = [
-  {
+  /* {
     id: "1",
     title: "Demystifying Layer 2 Scaling Solutions",
     excerpt:
@@ -117,6 +117,6 @@ function secureWithdraw() public {
     slug: "building-modern-dapp-nextjs-ethers",
     featuredImage:
       "https://lh3.googleusercontent.com/aida-public/AB6AXuBJ6CmzL1KtwHGbq3W5tubudEEvFbAqKnp2wspqsbX3zEoDrNXUge40CsdjhE3ic0ee3np4rBrr1eHq87E1Kf36Lx_1m6kIC2MBsyOc7t6nNMyVwli4-tqGyTTTPBwAQobDxvQN3KpPpbOMVjRBVLU_HluO4j6Kqy8k7okI73PlBY96kwDt4ykrew1KachOwMsDllHcIpluUUI15FHoU1KQkpY4J0bIHni5PO0XOfA1gFTYlYC981qXl7F4qS0bEeXuED7XOQCbLb0",
-  },
+  }, */
 ];
 

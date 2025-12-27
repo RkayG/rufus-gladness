@@ -16,19 +16,16 @@ export default function NewBlogPostPage() {
   const [status, setStatus] = useState<"Draft" | "Published">("Draft");
 
   const handleFormat = (format: string) => {
-    // In a real implementation, this would format the textarea content
-    console.log("Format:", format);
+    // TODO: this would format the textarea content
   };
 
   const handleSaveDraft = () => {
-    // Save as draft logic
-    console.log("Saving as draft...");
+    // TODO: Save as draft logic
   };
 
   const handlePublish = () => {
     // Publish logic
     setStatus("Published");
-    console.log("Publishing...");
   };
 
   return (

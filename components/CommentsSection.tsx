@@ -13,8 +13,7 @@ export function CommentsSection({ comments, postSlug }: CommentsSectionProps) {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    // In a real app, this would submit to an API
-    console.log("Comment submitted:", commentText);
+    // TODO: this would submit to an API
     setCommentText("");
   };
 
@@ -55,26 +54,26 @@ export function CommentsSection({ comments, postSlug }: CommentsSectionProps) {
       <div className="space-y-8">
         {displayComments.length > 0 ? (
           displayComments.map((comment) => (
-          <div key={comment.id} className="flex items-start gap-4">
-            <img
-              className="w-12 h-12 rounded-full object-cover"
-              src={comment.avatar}
-              alt={`Avatar of ${comment.author}`}
-            />
-            <div className="flex-1">
-              <div className="flex items-center gap-2">
-                <h4 className="font-bold text-[#333333] dark:text-[#e0ddd9]">
-                  {comment.author}
-                </h4>
-                <p className="text-xs text-[#A1887F] dark:text-[#8d7a71]">
-                  {comment.date}
+            <div key={comment.id} className="flex items-start gap-4">
+              <img
+                className="w-12 h-12 rounded-full object-cover"
+                src={comment.avatar}
+                alt={`Avatar of ${comment.author}`}
+              />
+              <div className="flex-1">
+                <div className="flex items-center gap-2">
+                  <h4 className="font-bold text-[#333333] dark:text-[#e0ddd9]">
+                    {comment.author}
+                  </h4>
+                  <p className="text-xs text-[#A1887F] dark:text-[#8d7a71]">
+                    {comment.date}
+                  </p>
+                </div>
+                <p className="mt-2 text-base text-[#333333] dark:text-[#e0ddd9]/90">
+                  {comment.content}
                 </p>
               </div>
-              <p className="mt-2 text-base text-[#333333] dark:text-[#e0ddd9]/90">
-                {comment.content}
-              </p>
             </div>
-          </div>
           ))
         ) : null}
       </div>
