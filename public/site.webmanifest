@@ -1,0 +1,16 @@
+{
+    "name": "Rufus Gladness - Lead Software Developer & Architect",
+    "short_name": "Rufus Gladness",
+    "description": "Portfolio website of Rufus Gladness - Lead Software Developer & Architect",
+    "start_url": "/",
+    "display": "standalone",
+    "background_color": "#ffffff",
+    "theme_color": "#6b4a49",
+    "icons": [
+        {
+            "src": "/favicon.ico",
+            "sizes": "any",
+            "type": "image/x-icon"
+        }
+    ]
+}
