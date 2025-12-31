@@ -23,7 +23,7 @@ export default function Home() {
                 <AnimatedButton href="/skills">View Skills</AnimatedButton>
                 <AnimatedButton href="/projects">View Projects</AnimatedButton>
               </div>
-             
+
             </div>
 
             {/* Get in Touch Section */}
@@ -36,13 +36,13 @@ export default function Home() {
                   Have a project in mind or want to collaborate? I&apos;d love to hear from you.
                 </p>
               </div>
-              
+
               <div className="bg-white dark:bg-[#2c2017] rounded-lg border border-slate-200 dark:border-[#473324] p-6 mb-6">
                 <div className="flex flex-col gap-2">
                   <ContactLink
-                    href="mailto:rufus.kenny09@gmail.com"
+                    href="mailto:rufus.k.gladness@gmail.com"
                     icon="mail"
-                    label="rufus.kenny09@gmail.com"
+                    label="rufus.k.gladness@gmail.com"
                     showCopy
                   />
                   <ContactLink
