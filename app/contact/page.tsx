@@ -37,12 +37,12 @@ export default function ContactPage() {
                   label="rufus.kenny09@gmail.com"
                   showCopy
                 />
-                <ContactLink
+                {/*  <ContactLink
                   href="#"
                   icon="calendar_month"
                   label="Schedule a Meeting"
                   showArrow
-                />
+                /> */}
                 <ContactLink
                   href="https://www.linkedin.com/in/gladness-rufus/"
                   icon="linkedin"

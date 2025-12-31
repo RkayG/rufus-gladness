@@ -13,6 +13,7 @@ interface AnimatedButtonProps {
   direction?: "left" | "right";
   target?: string;
   rel?: string;
+  disabled?: boolean;
 }
 
 export function AnimatedButton({
@@ -25,12 +26,15 @@ export function AnimatedButton({
   direction = "right",
   target,
   rel,
+  disabled,
 }: AnimatedButtonProps) {
-  const variantClass = variant === "ghost" 
-    ? "cta-button-ghost" 
+  const variantClass = variant === "ghost"
+    ? "cta-button-ghost"
     : "cta-button bg-[#6b4a49] dark:!bg-[#cf6417] dark:hover:shadow-[6px_6px_0_#c8a993]";
-  
+
   const directionClass = direction === "left" ? "cta-button-left" : "";
+  const disabledClass = disabled ? "opacity-50 cursor-not-allowed pointer-events-none" : "";
+
   const buttonContent = (
     <>
       {direction === "left" && (
@@ -101,13 +105,13 @@ export function AnimatedButton({
     // Use anchor tag for external links, Link for internal
     if (target || rel) {
       return (
-        <a href={href} target={target} rel={rel} className={`${variantClass} ${directionClass} ${className}`}>
+        <a href={href} target={target} rel={rel} className={`${variantClass} ${directionClass} ${disabledClass} ${className}`}>
           {buttonContent}
         </a>
       );
     }
     return (
-      <Link href={href} className={`${variantClass} ${directionClass} ${className}`}>
+      <Link href={href} className={`${variantClass} ${directionClass} ${disabledClass} ${className}`}>
         {buttonContent}
       </Link>
     );
@@ -117,7 +121,8 @@ export function AnimatedButton({
     <button
       type={type}
       onClick={onClick}
-      className={`${variantClass} ${directionClass} ${className}`}
+      disabled={disabled}
+      className={`${variantClass} ${directionClass} ${disabledClass} ${className}`}
     >
       {buttonContent}
     </button>
