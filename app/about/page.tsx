@@ -100,9 +100,9 @@ const experiences = [
     title: "Software Developer (Consulting)",
     company: "Kentry Limited, UK",
     points: [
-      "Developed the OnRoute dispatch system, automating real-time GPS tracking and job bidding workflows.",
-      "Delivered a mobile app and an admin oversight system streamlining logistics for private transport services, and improving business efficiency by 50%.",
-
+      "Architecting and developing OH PMR, a multi-tenant patient management system designed to serve 15,000+ potential pharmacies in the UK market, ensuring strict healthcare compliance and scalability.",
+      "Engineered the OnRoute dispatch ecosystem, automating real-time GPS tracking and job bidding workflows for logistics operations.",
+      "Launched a comprehensive logistics suite (mobile app & admin panel) for private transport, driving a 50% increase in operational efficiency through streamlined workflows."
     ]
   },
 
@@ -123,7 +123,7 @@ const experiences = [
     points: [
       "Architected and developed a B2B2C loyalty platform for cosmetic brands, focusing on high-fidelity UX and personalized engagement.",
       "Engineered a modular architecture that enabled 40% faster feature deployment and seamless API integrations.",
-
+      "Implemented a privacy-first data architecture, ensuring full GDPR compliance for handling sensitive user data across EU jurisdictions."
     ]
   },
   {

@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useRef } from "react";
 
 interface ProjectGalleryProps {
   images: string[];
@@ -13,6 +13,7 @@ export function ProjectGallery({ images, imageAlt, videoUrl }: ProjectGalleryPro
   const totalItems = videoUrl ? images.length + 1 : images.length;
   const [currentIndex, setCurrentIndex] = useState(0);
   const isVideo = videoUrl && currentIndex === 0;
+  const topRef = useRef<HTMLHeadingElement>(null);
 
   const nextItem = () => {
     setCurrentIndex((prev) => (prev + 1) % totalItems);
@@ -24,14 +25,20 @@ export function ProjectGallery({ images, imageAlt, videoUrl }: ProjectGalleryPro
 
   const selectItem = (index: number) => {
     setCurrentIndex(index);
+    topRef.current?.scrollIntoView({ behavior: "smooth", block: "start" });
   };
 
   return (
     <section className="flex flex-col gap-6">
-      <h2 className="font-handwriting text-4xl font-bold text-[#5D4037] dark:text-[#8D6E63]">
+      <h2
+        className="font-handwriting text-4xl font-bold text-[#5D4037] dark:text-[#8D6E63]"
+      >
         Project Gallery
       </h2>
-      <div className="relative w-full">
+      <div
+        ref={topRef}
+        className="relative w-full scroll-mt-24"
+      >
         <div className="aspect-video w-full overflow-hidden rounded-xl shadow-lg border border-gray-200 dark:border-gray-800">
           {isVideo ? (
             <video
@@ -43,11 +50,11 @@ export function ProjectGallery({ images, imageAlt, videoUrl }: ProjectGalleryPro
               Your browser does not support the video tag.
             </video>
           ) : (
-          <img
-            className="w-full h-full object-contain"
+            <img
+              className="w-full h-full object-contain"
               src={images[videoUrl ? currentIndex - 1 : currentIndex]}
-            alt={imageAlt}
-          />
+              alt={imageAlt}
+            />
           )}
         </div>
         {totalItems > 1 && (
@@ -78,11 +85,10 @@ export function ProjectGallery({ images, imageAlt, videoUrl }: ProjectGalleryPro
           {videoUrl && (
             <div
               onClick={() => selectItem(0)}
-              className={`aspect-video overflow-hidden rounded-lg cursor-pointer border-2 transition-colors ${
-                currentIndex === 0
-                  ? "border-[#8D6E63] shadow-md"
-                  : "border-transparent hover:border-[#8D6E63]/50"
-              }`}
+              className={`aspect-video overflow-hidden rounded-lg cursor-pointer border-2 transition-colors ${currentIndex === 0
+                ? "border-[#8D6E63] shadow-md"
+                : "border-transparent hover:border-[#8D6E63]/50"
+                }`}
             >
               <div className="relative w-full h-full bg-gray-900 flex items-center justify-center">
                 <span className="material-symbols-outlined text-white text-4xl">play_circle</span>
@@ -93,23 +99,21 @@ export function ProjectGallery({ images, imageAlt, videoUrl }: ProjectGalleryPro
           {images.map((image, index) => {
             const itemIndex = videoUrl ? index + 1 : index;
             return (
-            <div
-              key={index}
+              <div
+                key={index}
                 onClick={() => selectItem(itemIndex)}
-              className={`aspect-video overflow-hidden rounded-lg cursor-pointer border-2 transition-colors ${
-                  itemIndex === currentIndex
+                className={`aspect-video overflow-hidden rounded-lg cursor-pointer border-2 transition-colors ${itemIndex === currentIndex
                   ? "border-[#8D6E63] shadow-md"
                   : "border-transparent hover:border-[#8D6E63]/50"
-              }`}
-            >
-              <img
-                className={`w-full h-full object-cover transition-opacity ${
-                    itemIndex === currentIndex ? "opacity-100" : "opacity-70 hover:opacity-100"
-                }`}
-                src={image}
-                alt={`${imageAlt} - Image ${index + 1}`}
-              />
-            </div>
+                  }`}
+              >
+                <img
+                  className={`w-full h-full object-cover transition-opacity ${itemIndex === currentIndex ? "opacity-100" : "opacity-70 hover:opacity-100"
+                    }`}
+                  src={image}
+                  alt={`${imageAlt} - Image ${index + 1}`}
+                />
+              </div>
             );
           })}
         </div>
