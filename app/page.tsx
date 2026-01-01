@@ -50,12 +50,14 @@ export default function Home() {
                     icon="linkedin"
                     label="LinkedIn Profile"
                     showArrow
+                    target="_blank"
                   />
                   <ContactLink
                     href="https://github.com/RkayG"
                     icon="github"
                     label="GitHub Profile"
                     showArrow
+                    target="_blank"
                   />
                 </div>
               </div>
