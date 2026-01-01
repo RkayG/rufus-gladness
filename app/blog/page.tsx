@@ -107,10 +107,15 @@ export default function BlogPage() {
                     )}
                   </>
                 ) : (
-                  <div className="py-12 text-center">
-                    <p className="text-gray-600 dark:text-gray-300">
-                      No posts found. Try adjusting your filters or search
-                      query.
+                  <div className="flex flex-col items-center justify-center py-20 text-center">
+                    <div className="w-24 h-24 bg-primary/10 rounded-full flex items-center justify-center mb-6">
+                      <span className="material-symbols-outlined text-4xl text-primary">edit_note</span>
+                    </div>
+                    <h3 className="font-handwriting text-3xl font-bold text-primary mb-3">
+                      Gathering My Thoughts
+                    </h3>
+                    <p className="text-lg text-subtle-light dark:text-subtle-dark max-w-md mx-auto leading-relaxed">
+                      This is where I register my ideas and experiments. I'm still organizing the archives, but soon you'll find articles on software, design, and building the future.
                     </p>
                   </div>
                 )}
