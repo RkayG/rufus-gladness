@@ -32,9 +32,9 @@ export default function ContactPage() {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-16">
               <div className="flex flex-col gap-6">
                 <ContactLink
-                  href="mailto:rufus.kenny09@gmail.com"
+                  href="mailto:rufus.k.gladness@gmail.com"
                   icon="mail"
-                  label="rufus.kenny09@gmail.com"
+                  label="rufus.k.gladness@gmail.com"
                   showCopy
                 />
                 {/*  <ContactLink
