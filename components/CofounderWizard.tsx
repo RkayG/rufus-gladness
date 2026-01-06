@@ -33,7 +33,12 @@ export function CofounderWizard() {
     "equity-compensation": "",
   });
   const [isConfirmed, setIsConfirmed] = useState(false);
-  const [isSubmitted, setIsSubmitted] = useState(false);
+  const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">("idle");
+  const [errorMessage, setErrorMessage] = useState("");
+
+  const validateEmail = (email: string) => {
+    return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+  };
 
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>
@@ -79,14 +84,36 @@ export function CofounderWizard() {
       "equity-compensation": "",
     });
     setIsConfirmed(false);
-    setIsSubmitted(false);
+    setStatus("idle");
+    setErrorMessage("");
     router.push("/");
   };
 
-  const handleSubmit = () => {
+  const handleSubmit = async () => {
     if (isConfirmed) {
-      // TODO: Handle form submission here
-      setIsSubmitted(true);
+      setStatus("loading");
+      setErrorMessage("");
+
+      try {
+        const response = await fetch("/api/cofounder", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(formData),
+        });
+
+        const data = await response.json();
+
+        if (!response.ok) {
+          throw new Error(data.error || "Failed to send application");
+        }
+
+        setStatus("success");
+      } catch (error) {
+        setStatus("error");
+        setErrorMessage(error instanceof Error ? error.message : "Something went wrong");
+      }
     }
   };
 
@@ -97,7 +124,7 @@ export function CofounderWizard() {
   const progressPercentage = (currentStep / totalSteps) * 100;
 
   // Show Thank You page if submitted
-  if (isSubmitted) {
+  if (status === "success") {
     return (
       <div className="relative flex min-h-screen w-full flex-col">
         <div className="flex-grow">
@@ -111,7 +138,7 @@ export function CofounderWizard() {
                 Thank You!
               </h1>
               <p className="max-w-xl text-lg font-normal leading-relaxed text-[#9a6c4c] dark:text-[#a18a7c] pb-8">
-                Your submission for the technical cofounder wizard has been successfully received. I&apos;ll review your
+                I have received your submission. I&apos;ll review your
                 details and get back to you shortly.
               </p>
               <div className="flex w-full max-w-md flex-col sm:flex-row gap-4">
@@ -274,7 +301,13 @@ export function CofounderWizard() {
                     </div>
 
                     {/* Confirmation */}
-                    <div className="mt-4 flex items-center justify-center">
+                    <div className="mt-4 flex flex-col items-center justify-center gap-4">
+                      {status === "error" && (
+                        <div className="p-3 text-sm text-red-500 bg-red-50 dark:bg-red-900/10 rounded-lg">
+                          {errorMessage}
+                        </div>
+                      )}
+
                       <label className="flex cursor-pointer items-center gap-3" htmlFor="confirmation">
                         <input
                           className="h-5 w-5 rounded border-black/20 bg-transparent text-primary focus:ring-primary/50 dark:border-white/20"
@@ -282,6 +315,7 @@ export function CofounderWizard() {
                           type="checkbox"
                           checked={isConfirmed}
                           onChange={(e) => setIsConfirmed(e.target.checked)}
+                          disabled={status === "loading"}
                         />
                         <span className="text-sm text-subtle-light dark:text-subtle-dark">
                           I confirm that the information provided is accurate.
@@ -291,14 +325,20 @@ export function CofounderWizard() {
 
                     {/* Action Buttons */}
                     <div className="mt-6 flex flex-col-reverse items-center justify-between gap-4 border-t border-black/10 pt-8 dark:border-white/10 sm:flex-row">
-                      <AnimatedButton onClick={handlePrevious} variant="ghost" direction="left">
+                      <AnimatedButton
+                        onClick={handlePrevious}
+                        variant="ghost"
+                        direction="left"
+                        disabled={status === "loading"}
+                      >
                         Previous
                       </AnimatedButton>
                       <AnimatedButton
                         onClick={handleSubmit}
-                        className={!isConfirmed ? "opacity-50 cursor-not-allowed pointer-events-none" : ""}
+                        disabled={!isConfirmed || status === "loading"}
+                        className={!isConfirmed || status === "loading" ? "opacity-50 cursor-not-allowed pointer-events-none" : ""}
                       >
-                        Submit Application
+                        {status === "loading" ? "Submitting..." : "Submit Application"}
                       </AnimatedButton>
                     </div>
                   </div>
@@ -356,7 +396,10 @@ export function CofounderWizard() {
                         <label className="flex flex-col gap-2">
                           <p className="font-handwriting text-2xl font-semibold text-primary">Email Address</p>
                           <input
-                            className="flex w-full resize-none rounded-lg border border-[#D7CCC8] bg-background-light p-3 text-base text-text-light placeholder:text-text-light/50 focus:border-primary focus:ring-2 focus:ring-primary/20 dark:border-[#473324] dark:bg-background-dark dark:text-text-dark dark:placeholder:text-text-dark/50 dark:focus:border-primary"
+                            className={`flex w-full resize-none rounded-lg border bg-background-light p-3 text-base text-text-light placeholder:text-text-light/50 focus:border-primary focus:ring-2 focus:ring-primary/20 dark:bg-background-dark dark:text-text-dark dark:placeholder:text-text-dark/50 dark:focus:border-primary ${formData.email && !validateEmail(formData.email)
+                              ? "border-red-500 focus:border-red-500 focus:ring-red-500/20"
+                              : "border-[#D7CCC8] dark:border-[#473324]"
+                              }`}
                             placeholder="Enter your email address"
                             type="email"
                             name="email"
@@ -364,6 +407,9 @@ export function CofounderWizard() {
                             onChange={handleChange}
                             required
                           />
+                          {formData.email && !validateEmail(formData.email) && (
+                            <p className="text-sm text-red-500">Please enter a valid email address.</p>
+                          )}
                         </label>
                       </div>
                     </>
@@ -525,7 +571,7 @@ export function CofounderWizard() {
                     <AnimatedButton
                       onClick={handleNext}
                       className={
-                        ((currentStep === 1 && (!formData["full-name"] || !formData.email)) ||
+                        ((currentStep === 1 && (!formData["full-name"] || !validateEmail(formData.email))) ||
                           (currentStep === 2 && (!formData["idea-description"] || !formData["background-role"])) ||
                           (currentStep === 3 && (!formData["stage-of-idea"] || !formData.timeline || formData["technical-needs"].length === 0 || !formData["equity-compensation"])))
                           ? "opacity-50 cursor-not-allowed pointer-events-none"
