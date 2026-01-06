@@ -5,7 +5,7 @@ export const allProjects: Project[] = [
     id: "0",
     title: "Tenet",
     description:
-      "A production-ready Node.js framework that eliminates 90% of repetitive backend code through sophisticated TypeScript generics and declarative configuration. Useful for building secure, multi-tenant systems with built-in authentication, authorization, caching, and observability.",
+      "An enterprise-grade API framework for Node.js that provides built-in row-level security, role-based access control, audit trails, multi-tenancy, and compliance features. It's designed to help backend devs build secure multi-tenant APIs with ease and faster. Built through sophisticated TypeScript generics and declarative configuration.",
     imageUrl:
       "https://res.cloudinary.com/dxbbl7nve/image/upload/v1767646772/Screenshot_202_nlfmfq.png",
     imageAlt: "Tenet API framework landing page screenshot",
