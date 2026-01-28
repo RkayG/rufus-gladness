@@ -118,51 +118,7 @@ export const allProjects: Project[] = [
     role: "Architect & Developer",
     roleDescription: "Designed the core philosophy and implemented the framework's pipeline architecture, type system, and security mechanisms.",
   },
-  {
-    id: "1",
-    title: "Cxperia",
-    description:
-      "A B2B2C SaaS digital experience platform enabling beauty and cosmetic brands to create immersive, interactive product experiences through QR codes, tutorials, and analytics.",
-    imageUrl:
-      "https://res.cloudinary.com/dxbbl7nve/image/upload/v1765683566/cxr_lt6u5x.png",
-    imageAlt: "Cxperia digital experience platform dashboard",
-    technologies: [
-      "Next.js 15",
-      "TypeScript",
-      'Python',
-      'FastAPI',
-      'Redis',
-      "Tailwind CSS",
-      "Supabase",
-      "PostgreSQL",
-      "React",
-      "Zustand",
-      'Zod',
-    ],
-    category: "Web App",
-    liveDemoUrl: "",
-    githubUrl: "",
-    slug: "cxperia",
-    galleryImages: [
-      "https://res.cloudinary.com/dxbbl7nve/image/upload/v1765683566/cxr_lt6u5x.png",
-      'https://res.cloudinary.com/dxbbl7nve/image/upload/v1765683629/Screenshot_179_oai2zn.png',
-      'https://res.cloudinary.com/dxbbl7nve/image/upload/v1765683564/cxr2_talvfk.png',
-      'https://res.cloudinary.com/dxbbl7nve/image/upload/v1765683561/cxr4_ymdgmp.png',
-      'https://res.cloudinary.com/dxbbl7nve/image/upload/v1765683562/cxr3_zkqebv.png',
-      'https://res.cloudinary.com/dxbbl7nve/image/upload/v1765683560/cxr5_scv8dz.png',
-      'https://res.cloudinary.com/dxbbl7nve/image/upload/v1765683561/cxr7_bdfjcl.png',
-      'https://res.cloudinary.com/dxbbl7nve/image/upload/v1765683625/Screenshot_185_nhaqfl.png',
-      'https://res.cloudinary.com/dxbbl7nve/image/upload/v1765683621/Screenshot_187_lcksos.png',
-      'https://res.cloudinary.com/dxbbl7nve/image/upload/v1765683619/Screenshot_188_d83kly.png',
-      'https://res.cloudinary.com/dxbbl7nve/image/upload/v1765683617/Screenshot_193_bdgmki.png',
 
-    ],
-    overview:
-      "Cxperia is a comprehensive digital experience platform that enables beauty and cosmetic brands to create immersive, interactive product experiences. The platform allows brands to generate QR codes for their products, create step-by-step tutorials and routines, and collect valuable customer feedback and analytics. Built with a mobile-first approach, Cxperia provides brands with tools to enhance customer engagement, improve product education, and build stronger brand-customer relationships through digital experiences.",
-    role: "Founding Lead Developer",
-    roleDescription:
-      "Solely developed and launched the Cxperia platform, designing and implementing the entire platform architecture with a focus on modularity, extensibility, and scalable infrastructure.",
-  },
   {
     id: "2",
     title: "OnRoute",
