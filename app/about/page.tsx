@@ -93,9 +93,11 @@ const experiences = [
     title: "Software Developer | Remote",
     company: "Kentry Limited, UK",
     points: [
-      "Architecting **OH PMR**, a multi-tenant healthcare platform designed to serve potential 15,000+ pharmacies.",
-      "Engineered the **OnRoute** dispatch system a comprehensive logistics suite (mobile app & admin panel) for private transport, driving a 50% increase in operational efficiency through streamlined workflows.",
-      "Optimized legacy SQL queries and implemented a materialized view strategy that improved dashboard reporting speeds by 10x."
+      "Architecting OH PMR, a multi-tenant healthcare platform designed to serve potential 15,000+ pharmacies.",
+      "Engineered the OnRoute dispatch system a comprehensive logistics suite (mobile app & admin panel) for private transport, driving a 50% increase in operational efficiency through streamlined workflows.",
+      "Optimized legacy SQL queries and implemented a materialized view strategy that improved dashboard reporting speeds by 10x.",
+      "Built a validation system using the Haversine Formula that prevents drivers from initiating a job unless they are within 0.1 mile of the target location to ensure operational integrity.",
+      "Implemented real-time GPS tracking, document verification workflows, and a competitive bidding system where drivers submit fare proposals via mobile app."
     ]
   },
 
@@ -104,7 +106,7 @@ const experiences = [
     title: "Technical Co-founder",
     company: "Cxperia, France",
     points: [
-      "Built the **Cxperia** digital experience platform from scratch, utilizing Next.js for a high-performance frontend and a serverless backend for infinite scalability.",
+      "Built the Cxperia digital experience platform from scratch, utilizing Next.js for a high-performance frontend and a serverless backend for infinite scalability.",
       "Designed a modular feature-flag system that allowed non-technical teams to rollout campaigns to specific regions without code deployments.",
       "Implemented a privacy-first analytics pipeline that processes user interactions on the edge, ensuring compliance with strict EU data laws."
     ]
