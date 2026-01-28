@@ -142,7 +142,7 @@ const featuredProjects = allProjects.slice(0, 4);
 
 export const metadata: Metadata = {
   title: "About Me",
-  description: "Learn more about Rufus Gladness, a Lead Software Developer & Architect with expertise in Next.js, Python, and Blockchain. Discover my journey from first principles to first customers.",
+  description: "Learn more about Rufus Gladness, a Software Developer & Architect with expertise in Next.js, Python, and Blockchain. Discover my journey from first principles to first customers.",
   alternates: {
     canonical: "/about",
   },
@@ -157,7 +157,7 @@ export default function AboutPage() {
           <main className="flex-1 py-10 md:py-16">
             <ProfileHeader
               name="Rufus"
-              title="Lead Software Engineer & Systems Architect"
+              title="Software Engineer & Systems Architect"
               description="I build systems that survive success. My work focuses on creating backend architectures that handle scale, security, and complexity without becoming unmaintainable legacy code."
             />
             <section className="mt-16">
