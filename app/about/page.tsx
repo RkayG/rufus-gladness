@@ -89,8 +89,8 @@ const skills = [
 
 const experiences = [
   {
-    period: "2025 - Present",
-    title: "Software Developer (Consulting)",
+    period: "2024 - Present",
+    title: "Software Developer | Remote",
     company: "Kentry Limited, UK",
     points: [
       "Architecting **OH PMR**, a multi-tenant healthcare platform designed to serve potential 15,000+ pharmacies.",
@@ -98,15 +98,7 @@ const experiences = [
       "Optimized legacy SQL queries and implemented a materialized view strategy that improved dashboard reporting speeds by 10x."
     ]
   },
-  {
-    period: "2025 - Present",
-    title: "CTO & Lead Developer",
-    company: "J-Vortex Inc.",
-    points: [
-      "Defining the technical roadmap for **Wigree**, a decentralized P2P marketplace. Leading the implementation of smart contracts in Solidity and a hybrid off-chain indexer for performant user experiences.",
-      "Established strict CI/CD pipelines and codified infrastructure (IaC), reducing deployment risks and ensuring consistent environments across dev and production."
-    ]
-  },
+
   {
     period: "2025 - Present",
     title: "Technical Co-founder",
@@ -118,23 +110,25 @@ const experiences = [
     ]
   },
   {
-    period: "2024",
+    period: "2023-2024",
+    title: "Full-Stack Developer & Web3 Researcher",
+    company: "Web3Fruity",
+    points: [
+      "Developed a full-stack platform that curates the latest Web3 earning opportunities, including airdrops, task-based rewards, and play-to-earn games.",
+      "Developed a tier-based learning system offering structured Web3 education tailored to user experience levels.",
+      "Researched and curated emerging earning opportunities in the Web3 space, ensuring users have access to the most current and lucrative options."
+    ]
+  },
+  {
+    period: "2022-2023",
     title: "Backend & Python Instructor",
     company: "FuturDevs",
     points: [
       "Delivered a comprehensive, project-based curriculum on Backend Development and Python, covering core concepts, API design, database architecture, and scalable application patterns.",
-      "Mentored and coached a cohort of aspiring developers, providing code reviews and career guidance, with a focus on bridging theoretical knowledge to practical, industry-ready skills."
+      "Mentored and coached a cohort of aspiring developers, providing code reviews and career guidance, with a focus on bridging theoretical knowledge to practical, industry-ready skills."    
     ]
   },
-  {
-    period: "2020 - 2024",
-    title: "Operations Manager",
-    company: "Medaville Group, Nigeria",
-    points: [
-      "Managed business operations and logistics for a construction firm, overseeing a workforce of 50+ and optimising supply chain workflows.",
-      "Translated complex operational bottlenecks into process improvements, a skill that now informs my approach to software system design."
-    ]
-  },
+ 
 ];
 
 // Show first 3 projects as featured
@@ -142,7 +136,7 @@ const featuredProjects = allProjects.slice(0, 4);
 
 export const metadata: Metadata = {
   title: "About Me",
-  description: "Learn more about Rufus Gladness, a Lead Software Developer & Architect with expertise in Next.js, Python, and Blockchain. Discover my journey from first principles to first customers.",
+  description: "Learn more about Rufus Gladness, a Software Developer & Architect with expertise in Next.js, Python, and Blockchain. Discover my journey from first principles to first customers.",
   alternates: {
     canonical: "/about",
   },
@@ -157,7 +151,7 @@ export default function AboutPage() {
           <main className="flex-1 py-10 md:py-16">
             <ProfileHeader
               name="Rufus"
-              title="Lead Software Engineer & Systems Architect"
+              title="Software Engineer & Systems Architect"
               description="I build systems that survive success. My work focuses on creating backend architectures that handle scale, security, and complexity without becoming unmaintainable legacy code."
             />
             <section className="mt-16">
