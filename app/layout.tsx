@@ -34,19 +34,20 @@ const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || "https://rufusgladness.com";
 export const metadata: Metadata = {
   metadataBase: new URL(baseUrl),
   title: {
-    default: "Rufus Gladness - Lead Software Developer & Architect",
+    default: "Rufus Gladness - Backend Engineer & Technical Co-founder",
     template: "%s | Rufus Gladness",
   },
-  description: "Lead Software Developer & Architect specializing in building scalable systems from zero to one. Expert in Next.js, Python, Solidity, and technical strategy.",
+  description: "Backend Engineer & Technical Co-founder with 4+ years building production systems in AI, SaaS, logistics, and social commerce. Python, Node.js, TypeScript, PostgreSQL.",
   keywords: [
     "Rufus Gladness",
+    "Backend Engineer",
+    "Technical Co-founder",
     "Software Developer",
-    "Technical Architect",
-    "Full Stack Developer",
-    "Next.js Expert",
     "Python Developer",
-    "Solidity Developer",
-    "Blockchain Engineer",
+    "Node.js",
+    "TypeScript",
+    "PostgreSQL",
+    "Microservices",
     "SaaS Architect",
     "CTO for hire",
   ],
@@ -57,8 +58,8 @@ export const metadata: Metadata = {
     locale: "en_US",
     url: baseUrl,
     siteName: "Rufus Gladness Portfolio",
-    title: "Rufus Gladness - Lead Software Developer & Architect",
-    description: "Architecting scalable systems and transforming ambitious ideas into production-ready platforms.",
+    title: "Rufus Gladness - Backend Engineer & Technical Co-founder",
+    description: "Backend Engineer & Technical Co-founder with 4+ years building production systems in AI, SaaS, logistics, and social commerce.",
     images: [
       {
         url: "/og-image.png",
@@ -70,8 +71,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Rufus Gladness - Lead Software Developer & Architect",
-    description: "Architecting scalable systems and transforming ambitious ideas into production-ready platforms.",
+    title: "Rufus Gladness - Backend Engineer & Technical Co-founder",
+    description: "Backend Engineer & Technical Co-founder with 4+ years building production systems in AI, SaaS, logistics, and social commerce.",
     creator: "@rufusgladness", // Placeholder, user should update
     images: ["/og-image.png"],
   },

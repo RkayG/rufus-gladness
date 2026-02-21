@@ -4,6 +4,7 @@ interface Experience {
   company: string;
   description?: string;
   points?: string[];
+  stack?: string;
 }
 
 interface ExperienceSectionProps {
@@ -43,6 +44,11 @@ export function ExperienceSection({ experiences }: ExperienceSectionProps) {
                   <li key={i}>{point}</li>
                 ))}
               </ul>
+            )}
+            {exp.stack && (
+              <p className="mt-2 text-xs text-[#8D7B68] dark:text-[#c8a993]/70 italic">
+                Stack: {exp.stack}
+              </p>
             )}
           </div>
         ))}

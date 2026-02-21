@@ -89,48 +89,66 @@ const skills = [
 
 const experiences = [
   {
-    period: "2024 - Present",
-    title: "Software Developer | Remote",
-    company: "Kentry Limited, UK",
+    period: "2024 – Present",
+    title: "Co-founder & Backend Engineer",
+    company: "SmartMention | Remote",
     points: [
-      "Architecting OH PMR, a multi-tenant healthcare platform designed to serve potential 15,000+ pharmacies.",
-      "Engineered the OnRoute dispatch system a comprehensive logistics suite (mobile app & admin panel) for private transport, driving a 50% increase in operational efficiency through streamlined workflows.",
-      "Optimized legacy SQL queries and implemented a materialized view strategy that improved dashboard reporting speeds by 10x.",
-      "Built a validation system using the Haversine Formula that prevents drivers from initiating a job unless they are within 0.1 mile of the target location to ensure operational integrity.",
-      "Implemented real-time GPS tracking, document verification workflows, and a competitive bidding system where drivers submit fare proposals via mobile app."
-    ]
-  },
-
-  {
-    period: "2025 - Present",
-    title: "Technical Co-founder",
-    company: "Cxperia, France",
-    points: [
-      "Built the Cxperia digital experience platform from scratch, utilizing Next.js for a high-performance frontend and a serverless backend for infinite scalability.",
-      "Designed a modular feature-flag system that allowed non-technical teams to rollout campaigns to specific regions without code deployments.",
-      "Implemented a privacy-first analytics pipeline that processes user interactions on the edge, ensuring compliance with strict EU data laws."
-    ]
+      "Co-founded SmartMention, an AI-powered social listening and brand monitoring platform that tracks real-time mentions across thousands of platforms using custom keywords and hashtags.",
+      "Architected and built the core crawler engine — a fault-tolerant system capable of high-volume tracking and job queues.",
+      "Implemented an intelligent keyword monitoring pipeline and utilized Gemini Flash 2.0 to classify signals into leads, crises, trends, and anomalies with sub-second latency and ~87% accuracy.",
+      "Benchmarked multiple sentiment analysis solutions (Vader, Hugging Face, Gemini Flash) and designed a hybrid approach: Gemini Flash 2.0 as primary engine with Vader as a high-speed fallback for simple cases.",
+      "Built the scheduler system managing monitoring tasks, collection intervals, and alert triggers; assisted team in building the analytics dashboard frontend."
+    ],
+    stack: "Python, Node.js, React, Vite, PostgreSQL, Redis, AWS, NLP"
   },
   {
-    period: "2023-2024",
-    title: "Full-Stack Developer & Web3 Researcher",
-    company: "Web3Fruity",
+    period: "2025 – Present",
+    title: "Technical Co-founder & Lead Developer",
+    company: "Cxperia, France | Remote",
     points: [
-      "Developed a full-stack platform that curates the latest Web3 earning opportunities, including airdrops, task-based rewards, and play-to-earn games.",
-      "Developed a tier-based learning system offering structured Web3 education tailored to user experience levels.",
-      "Researched and curated emerging earning opportunities in the Web3 space, ensuring users have access to the most current and lucrative options."
-    ]
+      "Architected and engineered the Cxperia platform, a B2B2C SaaS loyalty platform designed for cosmetic brands, focusing on high-fidelity UX and personalized engagement.",
+      "Implemented a multi-tenant architecture with Row Level Security and Role Based Access Control for team members, ensuring application-level and database-level security, scalability and efficiency.",
+      "Engineered a privacy-first analytics pipeline to support brand decisions and ensured compliance with GDPR.",
+      "Configured staging and production environments to enable safe feature validation before rollout, reducing deployment risk across the platform."
+    ],
+    stack: "Python, NextJs, React, PostgreSQL, Redis, OVH, Sentry, Docker, Playwright"
   },
   {
-    period: "2022-2023",
-    title: "Backend & Python Instructor",
-    company: "FuturDevs",
+    period: "2025 – Present",
+    title: "Lead Engineer",
+    company: "J-Vortex Inc | Remote",
     points: [
-      "Delivered a comprehensive, project-based curriculum on Backend Development and Python, covering core concepts, API design, database architecture, and scalable application patterns.",
-      "Mentored and coached a cohort of aspiring developers, providing code reviews and career guidance, with a focus on bridging theoretical knowledge to practical, industry-ready skills."    
-    ]
+      "Led a team of 5 engineers to build Wigree, an escrow-powered social e-commerce platform.",
+      "Designed and co-built a http-based microservices architecture across 8 services using Django, balancing rapid development with long-term stability.",
+      "Implemented Celery for asynchronous task processing across services, handling background jobs, cross-service workflows, and scheduled operations.",
+      "Established CI/CD pipelines using GitHub Actions and Docker, standardizing deployment across all services and reducing release friction for the team.",
+      "Configured production server infrastructure including firewall rules, team access controls, and load analysis across microservices to ensure security and stability."
+    ],
+    stack: "Python, Django, Celery, Docker, Digital Ocean, PostgreSQL"
   },
- 
+  {
+    period: "2024 – 2025",
+    title: "Software Developer",
+    company: "Kentry Limited, Canterbury, UK | Remote",
+    points: [
+      "Engineered the OnRoute dispatch system, a comprehensive logistics suite for private transport, driving 50% increase in operational efficiency through streamlined workflows.",
+      "Built a validation system that prevented drivers from initiating a job unless they were within 0.1 mile of the target location to ensure operational integrity.",
+      "Implemented real-time GPS tracking, document verification workflows, and a competitive bidding where drivers submit fare proposals via mobile app.",
+      "Implemented materialized view strategy that improved dashboard reporting speeds by 10x."
+    ],
+    stack: "Node.js, React, React Native, PostgreSQL, Redis, Websocket, OVH"
+  },
+  {
+    period: "2022 – 2024",
+    title: "Full-Stack Developer",
+    company: "Web3Fruity, Nigeria",
+    points: [
+      "Developed a full-stack platform that curates the latest Web3 opportunities, including airdrops, task-based rewards, and play-to-earn games.",
+      "Designed a tier-based learning system offering structured Web3 education tailored to user experience levels.",
+      "Integrated Coingecko API for live token metrics, including market supply and price data."
+    ],
+    stack: "Node.js, NextJs, MongoDB, Coingecko API, Contentful CMS"
+  },
 ];
 
 // Show first 3 projects as featured
@@ -138,7 +156,7 @@ const featuredProjects = allProjects.slice(0, 4);
 
 export const metadata: Metadata = {
   title: "About Me",
-  description: "Learn more about Rufus Gladness, a Software Developer & Architect with expertise in Next.js, Python, and Blockchain. Discover my journey from first principles to first customers.",
+  description: "Backend Engineer & Technical Co-founder with 4+ years building production systems in AI, SaaS, logistics, and social commerce. Python, Node.js, TypeScript, PostgreSQL.",
   alternates: {
     canonical: "/about",
   },
@@ -153,8 +171,8 @@ export default function AboutPage() {
           <main className="flex-1 py-10 md:py-16">
             <ProfileHeader
               name="Rufus"
-              title="Software Engineer & Systems Architect"
-              description="I build systems that survive success. My work focuses on creating backend architectures that handle scale, security, and complexity without becoming unmaintainable legacy code."
+              title="Backend Engineer & Technical Co-founder"
+              description="Backend Engineer & Technical Co-founder with 4+ years of experience architecting and shipping production-grade systems across AI, SaaS, logistics, and social commerce. I specialize in designing distributed backend infrastructure — microservices, real-time data pipelines, multi-tenant architectures, and AI integration — using Python, Node.js, TypeScript, and PostgreSQL. Beyond writing code, I've co-founded two platforms from zero to production, led engineering teams, and made the technical decisions that shaped the product. I thrive in early-stage environments where ownership is total and the problems are unsolved."
             />
             <section className="mt-16">
               <h2 className="font-handwriting text-3xl font-bold text-[#6b4a49] dark:text-[#c8a993]">

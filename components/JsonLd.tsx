@@ -8,13 +8,13 @@ export function JsonLd() {
         "@type": "Person",
         "name": "Rufus Gladness",
         "url": baseUrl,
-        "jobTitle": "Lead Software Developer & Architect",
+        "jobTitle": "Backend Engineer & Technical Co-founder",
         "sameAs": [
             "https://github.com/RkayG",
             "https://www.linkedin.com/in/gladness-rufus/",
             "https://x.com/gladness_rkay"
         ],
-        "description": "Lead Software Developer & Architect specializing in building scalable systems from zero to one. Expert in Next.js, Python, Solidity, and technical strategy."
+        "description": "Backend Engineer & Technical Co-founder with 4+ years architecting production systems in AI, SaaS, logistics, and social commerce. Python, Node.js, TypeScript, PostgreSQL."
     };
 
     const websiteData = {
