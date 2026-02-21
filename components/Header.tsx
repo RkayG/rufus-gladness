@@ -41,12 +41,6 @@ export function Header() {
             className={getLinkClassName("/")}
             href="/"
           >
-            Home
-          </Link>
-          <Link
-            className={getLinkClassName("/about")}
-            href="/about"
-          >
             About
           </Link>
           <Link

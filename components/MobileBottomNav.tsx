@@ -11,7 +11,7 @@ export function MobileBottomNav() {
   const [screenWidth, setScreenWidth] = useState(0);
 
   const navItems = [
-    { href: "/about", label: "About", icon: "person" },
+    { href: "/", label: "About", icon: "person" },
     { href: "/skills", label: "Skills", icon: "psychology" },
     { href: "/projects", label: "Projects", icon: "folder" },
     { href: "/blog", label: "Blog", icon: "article" },
