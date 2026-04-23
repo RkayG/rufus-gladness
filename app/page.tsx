@@ -94,8 +94,8 @@ const experiences = [
 const featuredProjects = allProjects.slice(0, 4);
 
 export const metadata: Metadata = {
-  title: "Rufus Gladness — Backend Engineer & Technical Co-founder",
-  description: "Backend Engineer & Technical Co-founder with 4+ years building production systems in AI, SaaS, logistics, and social commerce. Python, Node.js, TypeScript, PostgreSQL.",
+  title: "Rufus Gladness — Software Developer & 3x Founder",
+  description: "Software Developer & 3x Founder with 4+ years building production systems in AI, SaaS, logistics, and social commerce. Python, Node.js, TypeScript, PostgreSQL.",
   alternates: {
     canonical: "/",
   },
@@ -110,21 +110,15 @@ export default function HomePage() {
           <main className="flex-1 py-10 md:py-16">
             <ProfileHeader
               name="Rufus"
-              title="Backend Engineer & Technical Co-founder"
-              description="Backend Engineer & Technical Co-founder with 4+ years of experience architecting and shipping production-grade systems across AI, SaaS, logistics, and social commerce."
+              title="Software Developer & 3x Founder"
+              description="Software Developer & 3x Founder with 4+ years of experience architecting and shipping production-grade systems across AI, SaaS, logistics, and social commerce."
             />
             <section className="mt-16 space-y-6">
               <p className="text-base font-normal leading-relaxed text-[#333333]/80 dark:text-[#c8a993]">
-                I specialize in distributed backend infrastructure: microservices, real-time data pipelines, multi-tenant architectures, and AI integration, using Python, Node.js, TypeScript, and PostgreSQL. 
-                Over four years across AI, SaaS, logistics, and social commerce, I&apos;ve developed one strong conviction: the most reliable systems aren&apos;t the most clever ones. They&apos;re the most honest ones — predictable because they&apos;re strongly typed, secure because they&apos;re designed that way from the first line, and simple because complexity is where bugs live.
+                I specialize in distributed backend infrastructure: microservices, real-time data pipelines, multi-tenant architectures, and AI integration, using Python, Node.js, TypeScript, and PostgreSQL.
               </p>
               <p className="text-base font-normal leading-relaxed text-[#333333]/80 dark:text-[#c8a993]">
-              I obsess over clean abstractions, type-safe systems,
-                and security by design—because in production, elegance isn't a luxury, it's a requirement
-                for maintainability and trust. And that is why I built <Link href="/projects/Tenet" className="font-semibold text-[#6b4a49] dark:text-[#d4a574] underline decoration-[#8D7B68]/50 dark:decoration-[#d4a574]/50 underline-offset-2 hover:decoration-current">Tenet</Link> — an open-source Node.js framework where security is opt-out, not opt-in. I got tired of rebuilding the same 16-stage middleware pipeline on every project. So I abstracted it. The result: endpoints have authentication, resource ownership, CSRF protection, SQL injection prevention, rate limiting, and audit logging by default, and I focus on the actual problem.
-              </p>
-              <p className="text-base font-normal leading-relaxed text-[#333333]/80 dark:text-[#c8a993]">
-                Beyond coding, I&apos;ve led engineering teams, set technical direction, and made the architecture decisions that shaped the product. 
+                Beyond coding, I&apos;ve led engineering teams, set technical direction, and made the architecture decisions that shaped the product.
               </p>
               <p className="text-base font-normal leading-relaxed text-[#333333]/80 dark:text-[#c8a993]">
                 I&apos;m available for remote contracts and full-time roles, and I&apos;m always interested in early-stage environments where the problems are unsolved and ownership is total.
