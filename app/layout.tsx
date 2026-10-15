@@ -4,6 +4,7 @@ import "./globals.css";
 import { ThemeProvider } from "@/components/ThemeProvider";
 import { MobileBottomNav } from "@/components/MobileBottomNav";
 import { FloatingWizardButton } from "@/components/FloatingWizardButton";
+import { Analytics } from "@vercel/analytics/next";
 
 const spaceGrotesk = Space_Grotesk({
   variable: "--font-display",
@@ -135,6 +136,7 @@ export default function RootLayout({
           <MobileBottomNav />
           <FloatingWizardButton />
         </ThemeProvider>
+        <Analytics />
       </body>
     </html>
   );
