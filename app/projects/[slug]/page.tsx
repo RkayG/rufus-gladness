@@ -164,7 +164,7 @@ export default async function ProjectDetailPage({
                     <h2 className="font-handwriting text-4xl font-bold text-[#5D4037] dark:text-[#8D6E63] mb-4">
                       Project Overview
                     </h2>
-                    <p className="text-base leading-relaxed text-[#333333]/90 dark:text-[#E0E0E0]/90 font-body">
+                    <p className="text-base leading-relaxed text-[#333333]/90 dark:text-[#E0E0E0]/90 font-body whitespace-pre-line">
                       {overview}
                     </p>
                   </section>
@@ -180,7 +180,7 @@ export default async function ProjectDetailPage({
                             <h3 className="text-xl font-semibold text-[#5D4037] dark:text-[#8D6E63] mb-2">
                               {feature.title}
                             </h3>
-                            <p className="text-base leading-relaxed text-[#333333]/90 dark:text-[#E0E0E0]/90 font-body">
+                            <p className="text-base leading-relaxed text-[#333333]/90 dark:text-[#E0E0E0]/90 font-body whitespace-pre-line">
                               {feature.description}
                             </p>
                           </div>
@@ -320,7 +320,7 @@ export default async function ProjectDetailPage({
                           ))}
                         </ul>
                       ) : (
-                        <p className="text-base leading-relaxed text-[#333333]/90 dark:text-[#E0E0E0]/90 font-body">
+                        <p className="text-base leading-relaxed text-[#333333]/90 dark:text-[#E0E0E0]/90 font-body whitespace-pre-line">
                           {results}
                         </p>
                       )}

@@ -119,7 +119,7 @@ export const allProjects: Project[] = [
     roleDescription: "Designed the core philosophy and implemented the framework's pipeline architecture, type system, and security mechanisms.",
   },
 
-    {
+      {
     id: "1",
     title: "Peiqo",
     description:
@@ -147,8 +147,80 @@ export const allProjects: Project[] = [
     galleryImages: [
       "/projects/peiqo.png",
     ],
-    overview:
-      "Peiqo is a unified cloud POS, kitchen management, and workforce automation platform engineered specifically for modern restaurants, bars, and retail establishments. Traditional hospitality setups force operators into fragmented systems: clunky hardware terminals, separate rota scheduling apps, and third-party payroll bureaus that charge heavy monthly per-seat fees and take days to process payslips. Peiqo replaces this entire stack with a cohesive, web-first platform built on Node.js, React, and PostgreSQL. At its heart is a deterministic, in-house UK statutory payroll engine verified 100% against HMRC's official 2026/27 Oracle test data—allowing operators to calculate penny-exact gross-to-net shift labor costs in real time as employees clock in and out, with zero third-party API latency or per-calculation fees.",
+    overview: `Point of Sale & Workforce Operating System.
+
+THE CONTEXT
+Engineering a real-time operational operating system for hospitality and retail.
+
+Built for UK restaurants, bars, and retail venues managing high-velocity service. I engineered an integrated platform connecting counter sales, kitchen operations, workforce scheduling, and statutory UK payroll—from order creation to pay run finalisation.
+
+THE PROBLEM
+Hospitality operations involve much more than processing transactions.
+
+Behind every service are orders to fire, tables to turn, kitchen tickets to pace, staff hours to track, labor budgets to control, and complex statutory tax obligations to calculate.
+
+Operators have traditionally run these through disconnected tools: a hardware POS on the counter, rota schedules across messaging apps and spreadsheets, and a third-party payroll bureau charging monthly per-seat fees with a multi-day turnaround for payslips.
+
+When an employee clocks in or an overtime shift is approved, the operator has zero real-time visibility into the actual gross-to-net labor cost against live sales.
+
+The goal wasn't to build another cash register. It was to build the operational system behind the venue.
+
+THE SOLUTION
+A platform connecting floor operations, kitchen stations, and workforce economics.
+
+Point of Sale: A high-velocity, keyboard-first cashier terminal supporting barcode scanning, split bills, multi-tender transactions, discounts, and cash float reconciliation.
+
+Kitchen Display (KDS): A real-time WebSocket ticket environment for kitchen teams, handling course pacing, ticket bumping, modifiers, and item status tracking.
+
+Workforce & Scheduling: Live time and attendance tracking with PIN clock-ins, dynamic rota scheduling, and labor-to-sales budget analytics.
+
+In-House Statutory Payroll Engine: A deterministic, UK HMRC-verified calculation engine that computes penny-exact PAYE, National Insurance, student loans, pension contributions, and SSP directly inside the platform—with zero third-party API latency or per-calculation fees.
+
+THE SYSTEM
+Aligning counter transactions, kitchen operations, and payroll economics.
+
+POS Terminal → WebSocket Dispatcher → Kitchen Display (KDS)
+      ↓
+Clock-in / Shifts → In-House Tax Engine (HMRC-Tested) → Live Shift Costing → Real-Time Labor Ratio → Finalised Pay Run & Payslips
+
+The interesting engineering challenge was making statutory payroll calculations instantaneous and deterministic so they could run directly alongside POS and rota workflows.
+
+A shift isn't just logged after the fact. It represents live operational cost. By building the HMRC statutory calculation engine in-house rather than calling external payroll bureau APIs, shift costs compute in under 2 milliseconds. Floor managers see live labor percentages against revenue in real time, and the entire POS operates seamlessly even during network outages.
+
+THE WORKFLOW
+One shift. Multiple stations. One system.
+
+Staff Clocks In (POS / PIN)
+↓
+Live Wage & NIC Accrual Starts
+↓
+Orders Taken at Counter / Table
+↓
+Tickets Dispatched to Kitchen (KDS)
+↓
+Kitchen Bumps Order / Service Completed
+↓
+Shift Ends / Hours Verified
+↓
+In-House HMRC Tax Engine Calculates PAYE, NI & Pension
+↓
+Pay Run Finalised & PDF Payslips Generated
+
+THE HMRC VERIFICATION
+100% mathematical parity with the official government oracle.
+
+To ensure production compliance, the in-house payroll engine was tested against the official HMRC 2026/27 Oracle Test Suite:
+• 5 Test Suites passed, 5 total
+• 73 Oracle test cases passed, 73 total
+• 0 discrepancies across UK, Scottish (6-band), and Welsh PAYE, Class 1 NICs (Standard & Director alternative methods), Student Loans (Plans 1, 2, 4, 5 & Postgrad), and SSP.
+
+THE ROLE
+System Architecture & Full-Stack Engineering
+
+I took ownership of the platform architecture and operational business logic, from the high-velocity POS cashier interface and real-time WebSocket kitchen display pipeline to the deterministic HMRC-verified statutory tax calculation engine, PostgreSQL multi-tenant isolation, and Stripe subscription infrastructure.
+
+THE RESULT
+The result is an operating system where a restaurant or retail business runs as a unified machine. Counter sales immediately drive kitchen workflows, clock-ins immediately inform labor margins, and payroll finalises in minutes without third-party fees, API rate limits, or external delays.`,
     keyFeatures: [
       {
         title: "HMRC-Verified UK Statutory Payroll Engine",
@@ -261,9 +333,9 @@ export class UKTaxCalculationService {
 });`,
       },
     ],
-    role: "Founder, Full-Stack Architect & Core Engineer",
+    role: "System Architecture & Full-Stack Engineering",
     roleDescription:
-      "Designed and developed the full Peiqo platform, from POS terminal UI and real-time WebSocket KDS to the HMRC-tested UK payroll engine, database schema, and Stripe billing infrastructure.",
+      "Engineered the complete Peiqo platform from the ground up: designing the high-velocity POS cashier interface, architecting the real-time WebSocket kitchen display pipeline, building the deterministic HMRC-verified statutory tax calculation engine, and implementing PostgreSQL multi-tenant isolation and Stripe billing infrastructure.",
   },
 
   {
