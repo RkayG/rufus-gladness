@@ -119,26 +119,22 @@ export const allProjects: Project[] = [
     roleDescription: "Designed the core philosophy and implemented the framework's pipeline architecture, type system, and security mechanisms.",
   },
 
-      {
+        {
     id: "1",
     title: "Peiqo",
     description:
-      "A high-velocity, multi-tenant Point-of-Sale (POS) and workforce management platform powered by an in-house statutory UK payroll engine verified against HMRC's 2026/27 Oracle Test Suite (73/73 tests). Features real-time shift costing, visual floor plans, Kitchen Display System (KDS), and Stripe subscription billing.",
+      "A multi-tenant retail POS and business management platform bringing together offline-first point-of-sale operations, inventory management, sales tracking, business administration, and online storefront capabilities.",
     imageUrl: "/projects/peiqo.png",
-    imageAlt: "Peiqo POS and Workforce Management platform showing sales terminal, shift costing, and payroll engine",
+    imageAlt: "Peiqo — Building a Modern Retail Management Platform",
     technologies: [
+      "Node.js",
       "TypeScript",
       "React",
-      "Node.js",
-      "Express",
-      "Prisma",
+      "Next.js",
       "PostgreSQL",
-      "Tailwind CSS",
+      "Prisma",
       "Redis",
-      "WebSockets",
-      "Stripe",
-      "Jest",
-      "Zod",
+      "Docker",
     ],
     category: "Web App",
     liveDemoUrl: "https://peiqo.com",
@@ -147,195 +143,117 @@ export const allProjects: Project[] = [
     galleryImages: [
       "/projects/peiqo.png",
     ],
-    overview: `Point of Sale & Workforce Operating System.
+    overview: `Peiqo is a retail management platform designed to help independent retailers and growing businesses manage their day-to-day operations from a single system.
 
-THE CONTEXT
-Engineering a real-time operational operating system for hospitality and retail.
+The platform brings together point-of-sale operations, inventory management, sales tracking, business administration, and online storefront capabilities.
 
-Built for UK restaurants, bars, and retail venues managing high-velocity service. I engineered an integrated platform connecting counter sales, kitchen operations, workforce scheduling, and statutory UK payroll—from order creation to pay run finalisation.
+The goal was to build more than a traditional POS system: a flexible, multi-tenant platform that could support different businesses, locations, and operational workflows without compromising usability or reliability.
 
-THE PROBLEM
-Hospitality operations involve much more than processing transactions.
+THE ENGINEERING APPROACH
+I approached Peiqo as a modular SaaS platform, separating its major interfaces while maintaining a shared backend and business logic.
 
-Behind every service are orders to fire, tables to turn, kitchen tickets to pace, staff hours to track, labor budgets to control, and complex statutory tax obligations to calculate.
+1. Multi-tenant architecture
+Designed the platform around business-level tenancy, allowing multiple businesses to operate independently on the same infrastructure.
+• Tenant-aware data access
+• Business and location-level context
+• Role-based access control
+• Authentication and authorization
+• Audit trails for important operations
 
-Operators have traditionally run these through disconnected tools: a hardware POS on the counter, rota schedules across messaging apps and spreadsheets, and a third-party payroll bureau charging monthly per-seat fees with a multi-day turnaround for payslips.
+2. Offline-first point of sale
+One of the major engineering considerations was ensuring that retail operations could continue when internet connectivity became unreliable.
+The POS application was designed as a Progressive Web App with offline capabilities.
+• Local transaction handling
+• Offline data persistence
+• Transaction synchronization
+• Conflict management
+• Recovery from interrupted synchronization
 
-When an employee clocks in or an overtime shift is approved, the operator has zero real-time visibility into the actual gross-to-net labor cost against live sales.
+3. Multiple product interfaces
+Peiqo consists of distinct interfaces serving different operational needs:
+• Business Dashboard: A management interface for configuring and managing business operations, products, inventory, and sales.
+• Point of Sale: A dedicated interface optimized for checkout workflows, product scanning, transaction processing, and retail hardware integration.
+• Online Storefront: A customer-facing storefront built to allow businesses to establish their online presence and sell products beyond their physical locations.
 
-The goal wasn't to build another cash register. It was to build the operational system behind the venue.
+4. Retail hardware integration
+The POS experience was designed with physical retail environments in mind, including support considerations for:
+• Thermal receipt printers
+• Barcode scanners
+• Cash drawers
+• Customer-facing displays
 
-THE SOLUTION
-A platform connecting floor operations, kitchen stations, and workforce economics.
-
-Point of Sale: A high-velocity, keyboard-first cashier terminal supporting barcode scanning, split bills, multi-tender transactions, discounts, and cash float reconciliation.
-
-Kitchen Display (KDS): A real-time WebSocket ticket environment for kitchen teams, handling course pacing, ticket bumping, modifiers, and item status tracking.
-
-Workforce & Scheduling: Live time and attendance tracking with PIN clock-ins, dynamic rota scheduling, and labor-to-sales budget analytics.
-
-In-House Statutory Payroll Engine: A deterministic, UK HMRC-verified calculation engine that computes penny-exact PAYE, National Insurance, student loans, pension contributions, and SSP directly inside the platform—with zero third-party API latency or per-calculation fees.
-
-THE SYSTEM
-Aligning counter transactions, kitchen operations, and payroll economics.
-
-POS Terminal → WebSocket Dispatcher → Kitchen Display (KDS)
-      ↓
-Clock-in / Shifts → In-House Tax Engine (HMRC-Tested) → Live Shift Costing → Real-Time Labor Ratio → Finalised Pay Run & Payslips
-
-The interesting engineering challenge was making statutory payroll calculations instantaneous and deterministic so they could run directly alongside POS and rota workflows.
-
-A shift isn't just logged after the fact. It represents live operational cost. By building the HMRC statutory calculation engine in-house rather than calling external payroll bureau APIs, shift costs compute in under 2 milliseconds. Floor managers see live labor percentages against revenue in real time, and the entire POS operates seamlessly even during network outages.
-
-THE WORKFLOW
-One shift. Multiple stations. One system.
-
-Staff Clocks In (POS / PIN)
-↓
-Live Wage & NIC Accrual Starts
-↓
-Orders Taken at Counter / Table
-↓
-Tickets Dispatched to Kitchen (KDS)
-↓
-Kitchen Bumps Order / Service Completed
-↓
-Shift Ends / Hours Verified
-↓
-In-House HMRC Tax Engine Calculates PAYE, NI & Pension
-↓
-Pay Run Finalised & PDF Payslips Generated
-
-THE HMRC VERIFICATION
-100% mathematical parity with the official government oracle.
-
-To ensure production compliance, the in-house payroll engine was tested against the official HMRC 2026/27 Oracle Test Suite:
-• 5 Test Suites passed, 5 total
-• 73 Oracle test cases passed, 73 total
-• 0 discrepancies across UK, Scottish (6-band), and Welsh PAYE, Class 1 NICs (Standard & Director alternative methods), Student Loans (Plans 1, 2, 4, 5 & Postgrad), and SSP.
-
-THE ROLE
-System Architecture & Full-Stack Engineering
-
-I took ownership of the platform architecture and operational business logic, from the high-velocity POS cashier interface and real-time WebSocket kitchen display pipeline to the deterministic HMRC-verified statutory tax calculation engine, PostgreSQL multi-tenant isolation, and Stripe subscription infrastructure.
-
-THE RESULT
-The result is an operating system where a restaurant or retail business runs as a unified machine. Counter sales immediately drive kitchen workflows, clock-ins immediately inform labor margins, and payroll finalises in minutes without third-party fees, API rate limits, or external delays.`,
+5. Business operations and extensibility
+The platform was structured to accommodate additional business capabilities, including staff management, purchasing, expenses, payroll, and VAT-related workflows.
+The architectural direction prioritizes modularity so that business-specific capabilities can evolve without making the core platform unnecessarily complex.`,
     keyFeatures: [
       {
-        title: "HMRC-Verified UK Statutory Payroll Engine",
-        description: "100% verified against the official HMRC 2026/27 Oracle suite across England, Wales, and Scotland PAYE bands (cumulative & W1/M1), National Insurance categories (A-Z & Director alternative methods), Student Loans (Plans 1-5 & Postgraduate), Statutory Sick Pay (SSP), and auto-enrolment workplace pensions.",
+        title: "Multi-Tenant Architecture",
+        description: "Designed around business-level tenancy, allowing multiple businesses to operate independently on shared infrastructure with tenant-aware data access, location-level context, and role-based access control.",
       },
       {
-        title: "Keyboard-First POS Terminal",
-        description: "Ultra-fast register interface optimized for peak service hours, featuring barcode scanning, split bills, multi-tender transactions (cash, card, voucher), discount controls, drawer float reconciliation, and offline transaction queuing.",
+        title: "Offline-First Point of Sale",
+        description: "Progressive Web App with local transaction handling, offline data persistence, transaction synchronization, conflict management, and recovery from interrupted sync.",
       },
       {
-        title: "Real-Time Kitchen Display System (KDS)",
-        description: "Low-latency WebSocket pipeline streaming order tickets from POS to kitchen stations with course pacing, modifiers, item-level status updates, and ticket bumping.",
+        title: "Multiple Product Interfaces",
+        description: "Distinct interfaces tailored for operational needs: a Business Dashboard for administration and inventory, an optimized POS for checkout and scanning, and a customer-facing Online Storefront.",
       },
       {
-        title: "Live Shift Costing & Rota Management",
-        description: "Calculates precise gross-to-net labor costs on POS clock-in/out and rota shifts, giving operators live labor-to-sales ratios without waiting for monthly bureau reports or hitting third-party API rate limits.",
+        title: "Retail Hardware Integration",
+        description: "Designed for physical retail environments with support considerations for thermal receipt printers, barcode scanners, cash drawers, and customer-facing displays.",
       },
       {
-        title: "Multi-Tenant SaaS with Stripe Billing",
-        description: "Strict database-level tenant isolation with Prisma ORM, tiered subscription gating (Basic, Pro, Enterprise) via Stripe webhooks, and automatic CSV/Excel accounting exports.",
+        title: "Business Operations & Extensibility",
+        description: "Modular foundation structured to accommodate additional business capabilities including staff management, purchasing, expenses, payroll, and VAT-related workflows.",
       },
     ],
     technicalHighlights: [
-      "Engineered an in-house UK tax calculation engine achieving 100% compliance across all 73 official HMRC 2026/27 Oracle benchmark test suites.",
-      "Implemented penny-exact integer and fixed-precision decimal arithmetic to eliminate floating-point rounding discrepancies on cumulative PAYE tax bands.",
-      "Architected a real-time event pipeline using WebSockets for instantaneous order routing between cash registers and kitchen display monitors.",
-      "Designed multi-tenant schema isolation in PostgreSQL with Prisma ORM, enforcing strict business tenant scoping across all transactions and HR records.",
-      "Built offline sync queue capabilities in IndexedDB ensuring uninterrupted cashier operations during temporary network drops.",
+      "Multi-tenant SaaS architecture with tenant-aware data access and location-level isolation.",
+      "Full-stack product engineering across Node.js, TypeScript, React, Next.js, and PostgreSQL.",
+      "Offline-first application design with local persistence, transaction synchronization, and conflict resolution.",
+      "Transaction-oriented backend development with Prisma ORM and PostgreSQL.",
+      "Separated product interfaces: Admin Dashboard (React + Vite), POS Application (React + Vite PWA), and Online Storefront (Next.js).",
+      "Deployment and infrastructure management using Docker and self-hosted infrastructure.",
     ],
     architecture: {
       designPatterns: [
-        "Domain-Driven Design",
-        "Pipeline Architecture",
-        "Event-Driven Architecture",
-        "Repository Pattern",
-        "Declarative Entitlement Guards",
+        "Multi-Tenant SaaS",
+        "Offline-First (PWA)",
+        "Modular Monolith",
+        "Role-Based Access Control",
+        "Separation of Concerns",
       ],
       keyComponents: [
-        "HMRC Statutory Tax & Deductions Engine",
-        "POS Cashier & Checkout Pipeline",
-        "WebSocket KDS Dispatcher",
-        "Time & Attendance Tracking Engine",
-        "Stripe Subscription & Entitlements Guard",
+        "Backend Core API (Node.js & TypeScript)",
+        "Database & ORM (PostgreSQL & Prisma)",
+        "Cache & Supporting Services (Redis)",
+        "Admin Dashboard (React + Vite)",
+        "POS Application (React + Vite PWA)",
+        "Online Storefront (Next.js)",
       ],
       scalabilityFeatures: [
-        "Sub-millisecond in-memory statutory tax computation eliminating third-party API dependencies",
-        "Optimistic UI updates with offline transaction queuing for zero cashier downtime",
-        "Stateless containerized backend architecture supporting horizontal auto-scaling",
-        "Database connection pooling and indexed queries across multi-tenant partitions",
+        "Offline-first instead of online-only: retail operations continue through internet instability",
+        "Separate applications for cashier, business owner, and online shopper to optimize each experience",
+        "Tenant isolation as an architectural concern considered from data and authorization layers",
+        "Modular business capabilities allowing retail workflows to evolve independently",
       ],
     },
     challenges: [
-      "Reverse-engineering and matching HMRC's intricate statutory rules: handling cumulative tax weeks vs. non-cumulative Week 1/Month 1 basis, Scottish starter/basic/intermediate/higher/advanced/top bands, Welsh differentials, Director NI standard vs. cumulative alternative methods, and penny rounding conventions. Solution: built an automated test harness that ingests HMRC's official oracle spreadsheets and validates calculations against all 73 test cases with 0 discrepancies.",
-      "Real-time labor costing: calculating accurate shift cost previews on the POS terminal without hammering external payroll APIs or introducing latency to cashier operations. Solution: local execution within the core application engine, running gross-to-net calculations in under 2ms per employee.",
+      "Many independent retailers rely on disconnected tools to manage sales, inventory, staff, and online orders, creating operational friction, inconsistent business data, and difficulties maintaining visibility across physical and digital sales channels.",
+      "Supporting multiple independent businesses within one platform while maintaining strict tenant and location-level data isolation.",
+      "Supporting retail transactions even when internet connectivity is unreliable, ensuring transactions persist locally and synchronize automatically once connectivity is restored.",
+      "Keeping inventory and sales information consistent across physical checkout and online storefront interfaces.",
+      "Providing an online storefront alongside physical point-of-sale operations while supporting different staff roles and permissions within each business.",
     ],
     results: [
-      "**100% HMRC Oracle Compliance**: All 73 official benchmark test suites passed with 0 discrepancies.",
-      "**Sub-50ms Transaction Processing**: Lightning-fast register operations capable of high-volume peak hospitality hours.",
-      "**Zero API Payroll Overhead**: Eliminated third-party payroll bureau fees (~£1–£2/employee/month) and costly onboarding setup fees.",
-      "**Enterprise Reliability**: Seamless multi-location and multi-tenant capabilities built for restaurant and retail scale.",
+      "**Multi-Application Retail Platform**: Peiqo evolved into a multi-application retail SaaS platform covering business management, point-of-sale operations, and online commerce.",
+      "**Real-World Operational Resilience**: Offline-first POS ensures retail operations can proceed without depending on continuous internet stability.",
+      "**Architectural Tenant Isolation**: Strict multi-tenancy enforced from data and authorization layers rather than simple query identifiers.",
+      "**Comprehensive Product Engineering**: Substantial engineering across backend systems, frontend applications, offline synchronization, database design, and deployment infrastructure.",
     ],
-    codeSamples: [
-      {
-        title: "HMRC-Verified PAYE Cumulative Tax Calculation",
-        description: "Handles tax codes, cumulative allowance allocation, and tax band thresholds for UK, Scottish, and Welsh payroll.",
-        code: `// UK Statutory PAYE Tax Calculation Service (Tax Year 2026/2027)
-export class UKTaxCalculationService {
-  private readonly PERSONAL_ALLOWANCE = 12570;
-  private readonly BASIC_RATE_THRESHOLD = 50270;
-  private readonly HIGHER_RATE_THRESHOLD = 125140;
-
-  calculateIncomeTax(
-    grossPay: number,
-    taxCode: string,
-    payFrequency: 'WEEKLY' | 'FORTNIGHTLY' | 'MONTHLY' | 'ANNUALLY',
-    ytdGrossPay: number = 0,
-    ytdTax: number = 0,
-    options: TaxCalculationOptions = {}
-  ): number {
-    const code = taxCode.toUpperCase().trim();
-    const periodNumber = options.periodNumber || 1;
-    const periodsInYear = this.getPeriodsInYear(payFrequency);
-
-    // Cumulative allowance allocation
-    const cumulativeAllowance = (this.PERSONAL_ALLOWANCE / periodsInYear) * periodNumber;
-    const cumulativeGross = ytdGrossPay + grossPay;
-    const cumulativeTaxable = Math.max(0, cumulativeGross - cumulativeAllowance);
-
-    // Compute cumulative tax across statutory bands
-    const totalTaxDue = this.computeBandTax(cumulativeTaxable, periodNumber, periodsInYear);
-    const periodTax = Math.max(0, totalTaxDue - ytdTax);
-
-    return Math.round(periodTax * 100) / 100;
-  }
-}`,
-      },
-      {
-        title: "Declarative Feature Entitlement Guard",
-        description: "Enforces multi-tenant RBAC and subscription tier limits before executing business logic.",
-        code: `export const generateBulkPayslips = createAuthenticatedHandler({
-  features: ['payroll'],
-  roles: ['OWNER', 'MANAGER'],
-  schema: GeneratePayslipsSchema,
-  handler: async ({ input, businessId, prisma: tx }) => {
-    // Verified tenant isolation and active subscription tier
-    return await payrollService.generatePayslips(input, businessId, tx);
-  },
-  successStatus: 201,
-  successMessage: 'Payslips generated successfully',
-});`,
-      },
-    ],
-    role: "System Architecture & Full-Stack Engineering",
+    role: "Software Engineer",
     roleDescription:
-      "Engineered the complete Peiqo platform from the ground up: designing the high-velocity POS cashier interface, architecting the real-time WebSocket kitchen display pipeline, building the deterministic HMRC-verified statutory tax calculation engine, and implementing PostgreSQL multi-tenant isolation and Stripe billing infrastructure.",
+      "Product engineering across the backend, frontend applications, architecture, and infrastructure.",
   },
 
   {
