@@ -477,35 +477,7 @@ The platform provides a centralized environment for business owners to oversee t
     roleDescription:
       "Designed and developed the complete Chrome extension including ad detection algorithms, TMDb API integration, interactive movie cards, popup interface, and watchlist management system with Chrome Storage Sync.",
   },
-  {
-    id: "7",
-    title: "OH Health+ Pharmacy Website",
-    description:
-      "A modern, ultra-sleek pharmacy website built with Next.js, TypeScript, and Tailwind CSS. This static site showcases all pharmacy services and enables online booking.",
-    imageUrl:
-      "https://res.cloudinary.com/dxbbl7nve/image/upload/v1765188321/oh-pharma-website_bdwep4.png",
-    imageAlt: "OH Health + Pharmacy website showing modern design with glassmorphism effects",
-    technologies: [
-      "Next.js 16",
-      "TypeScript",
-      "Tailwind CSS",
-      "React Icons",
-      "App Router",
-      "Static Site Generation",
-    ],
-    category: "Web App",
-    liveDemoUrl: "https://oh-pharmacy-m5xo.vercel.app/",
-    githubUrl: "https://github.com/RkayG/oh-pharmacy",
-    slug: "oh-health-pharmacy",
-    galleryImages: [
-      "https://res.cloudinary.com/dxbbl7nve/image/upload/v1765188321/oh-pharma-website_bdwep4.png",
-    ],
-    overview:
-      "A modern, ultra-sleek pharmacy website built with Next.js, TypeScript, and Tailwind CSS. This static site showcases all pharmacy services and enables online booking. The website features an ultra-modern UI with glassmorphism effects and smooth animations, fully responsive design optimized for all devices, 70+ service pages covering all pharmacy services, service filtering and search functionality, online booking integration with external booking platforms, component-based architecture for easy maintenance, and static site generation for fast loading and easy deployment.",
-    role: "Designer & Developer",
-    roleDescription:
-      "Designed and developed the OH Health+ Pharmacy website with a focus on modern UI/UX, responsive design, and optimal performance using Next.js static site generation.",
-  },
+ 
   {
     id: "8",
     title: "Web3Fruity",
@@ -542,5 +514,99 @@ The platform provides a centralized environment for business owners to oversee t
     roleDescription:
       "Designed and developed the complete Web3Fruity platform including frontend interface, RESTful API backend, and Contentful CMS integration. Architected the headless CMS content models for airdrops, games, reward tasks, token farms, and crypto news, enabling efficient content management. Built the API layer that synchronizes Contentful content with the frontend application and implemented the tier-based education content architecture within the CMS.",
   },
-];
+  {
+    id: "9",
+    title: "OnRoute Group Website",
+    description:
+      "A modern, high-performance company website built for OnRoute Transport Group, a UK passenger transport provider across Essex and Kent specializing in home-to-school transport, council contracts, and private hire.",
+    imageUrl: "/onrout.png",
+    imageAlt: "OnRoute Transport Group official website showcase",
+    technologies: [
+      "Next.js",
+      "TypeScript",
+      "Tailwind CSS",
+      "React",
+      "App Router",
+      "SEO Optimization",
+    ],
+    category: "Web App",
+    liveDemoUrl: "https://onroutegroup.co.uk",
+    githubUrl: "",
+    slug: "onroute-group-website",
+    galleryImages: [
+      "/onrout.png",
+    ],
+    overview: `OnRoute Transport Group Website.
 
+THE CONTEXT
+A digital gateway for professional passenger transport across Essex & Kent.
+
+OnRoute Transport Group is a UK-based passenger transport provider delivering safe, dependable home-to-school journeys, local authority contracted transport, and private group hire. I engineered their primary brand website to establish a strong digital presence, showcase their transport services, and streamline quote requests from schools, parents, councils, and corporate clients.
+
+THE SOLUTION
+A fast, modern corporate web platform built for trust and operational clarity.
+
+Home-to-School Transport: Dedicated service portals outlining driver safeguarding, vetting, and routes for local authorities, academies, and families.
+
+Private Hire & Quotes: An interactive quote request system making it easy for private clients, event planners, and corporate groups to book airport transfers and group travel.
+
+Driver & Fleet Onboarding: A clear channel for driver recruitment, fleet compliance guidelines, and mobile driver app integration.
+
+Performance & SEO: Built with Next.js and Tailwind CSS for instant load speeds, responsive design across mobile and desktop, and strong local SEO rankings across Essex and Kent communities.
+
+THE ROLE
+Designer & Full-Stack Developer
+
+Designed and developed the complete OnRoute Transport Group website from visual identity and UX wireframes to frontend implementation, content architecture, quote request workflows, and deployment.`,
+    keyFeatures: [
+      {
+        title: "Passenger Transport Showcase",
+        description: "Comprehensive service hubs highlighting home-to-school transport, council contracts, airport transfers, and corporate group hire with clear passenger safety and safeguarding information.",
+      },
+      {
+        title: "Streamlined Quote System",
+        description: "User-friendly quotation request workflows tailored for parents, schools, and private clients to quickly arrange bespoke passenger travel.",
+      },
+      {
+        title: "Driver Recruitment & App Integration",
+        description: "Dedicated recruitment and onboarding section directing prospective drivers to compliance requirements and the OnRoute driver mobile application.",
+      },
+      {
+        title: "Modern UI/UX & Responsive Design",
+        description: "Engineered with Next.js and Tailwind CSS featuring clean typography, mobile responsiveness, fast static page delivery, and local search optimization.",
+      },
+    ],
+    role: "Designer & Developer",
+    roleDescription:
+      "Designed and developed the complete OnRoute Transport Group corporate website, focusing on modern UI/UX, service quote workflows, and optimal performance using Next.js.",
+  },
+   {
+    id: "7",
+    title: "OH Health+ Pharmacy Website",
+    description:
+      "A modern, ultra-sleek pharmacy website built with Next.js, TypeScript, and Tailwind CSS. This static site showcases all pharmacy services and enables online booking.",
+    imageUrl:
+      "https://res.cloudinary.com/dxbbl7nve/image/upload/v1765188321/oh-pharma-website_bdwep4.png",
+    imageAlt: "OH Health + Pharmacy website showing modern design with glassmorphism effects",
+    technologies: [
+      "Next.js 16",
+      "TypeScript",
+      "Tailwind CSS",
+      "React Icons",
+      "App Router",
+      "Static Site Generation",
+    ],
+    category: "Web App",
+    liveDemoUrl: "https://oh-pharmacy-m5xo.vercel.app/",
+    githubUrl: "",
+    slug: "oh-health-pharmacy",
+    galleryImages: [
+      "https://res.cloudinary.com/dxbbl7nve/image/upload/v1765188321/oh-pharma-website_bdwep4.png",
+    ],
+    overview:
+      "A modern, ultra-sleek pharmacy website built with Next.js, TypeScript, and Tailwind CSS. This static site showcases all pharmacy services and enables online booking. The website features an ultra-modern UI with glassmorphism effects and smooth animations, fully responsive design optimized for all devices, 70+ service pages covering all pharmacy services, service filtering and search functionality, online booking integration with external booking platforms, component-based architecture for easy maintenance, and static site generation for fast loading and easy deployment.",
+    role: "Designer & Developer",
+    roleDescription:
+      "Designed and developed the OH Health+ Pharmacy website with a focus on modern UI/UX, responsive design, and optimal performance using Next.js static site generation.",
+  },
+];
