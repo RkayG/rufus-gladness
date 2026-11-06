@@ -119,6 +119,153 @@ export const allProjects: Project[] = [
     roleDescription: "Designed the core philosophy and implemented the framework's pipeline architecture, type system, and security mechanisms.",
   },
 
+    {
+    id: "1",
+    title: "Peiqo",
+    description:
+      "A high-velocity, multi-tenant Point-of-Sale (POS) and workforce management platform powered by an in-house statutory UK payroll engine verified against HMRC's 2026/27 Oracle Test Suite (73/73 tests). Features real-time shift costing, visual floor plans, Kitchen Display System (KDS), and Stripe subscription billing.",
+    imageUrl: "/projects/peiqo.png",
+    imageAlt: "Peiqo POS and Workforce Management platform showing sales terminal, shift costing, and payroll engine",
+    technologies: [
+      "TypeScript",
+      "React",
+      "Node.js",
+      "Express",
+      "Prisma",
+      "PostgreSQL",
+      "Tailwind CSS",
+      "Redis",
+      "WebSockets",
+      "Stripe",
+      "Jest",
+      "Zod",
+    ],
+    category: "Web App",
+    liveDemoUrl: "https://peiqo.com",
+    githubUrl: "",
+    slug: "peiqo",
+    galleryImages: [
+      "/projects/peiqo.png",
+    ],
+    overview:
+      "Peiqo is a unified cloud POS, kitchen management, and workforce automation platform engineered specifically for modern restaurants, bars, and retail establishments. Traditional hospitality setups force operators into fragmented systems: clunky hardware terminals, separate rota scheduling apps, and third-party payroll bureaus that charge heavy monthly per-seat fees and take days to process payslips. Peiqo replaces this entire stack with a cohesive, web-first platform built on Node.js, React, and PostgreSQL. At its heart is a deterministic, in-house UK statutory payroll engine verified 100% against HMRC's official 2026/27 Oracle test data—allowing operators to calculate penny-exact gross-to-net shift labor costs in real time as employees clock in and out, with zero third-party API latency or per-calculation fees.",
+    keyFeatures: [
+      {
+        title: "HMRC-Verified UK Statutory Payroll Engine",
+        description: "100% verified against the official HMRC 2026/27 Oracle suite across England, Wales, and Scotland PAYE bands (cumulative & W1/M1), National Insurance categories (A-Z & Director alternative methods), Student Loans (Plans 1-5 & Postgraduate), Statutory Sick Pay (SSP), and auto-enrolment workplace pensions.",
+      },
+      {
+        title: "Keyboard-First POS Terminal",
+        description: "Ultra-fast register interface optimized for peak service hours, featuring barcode scanning, split bills, multi-tender transactions (cash, card, voucher), discount controls, drawer float reconciliation, and offline transaction queuing.",
+      },
+      {
+        title: "Real-Time Kitchen Display System (KDS)",
+        description: "Low-latency WebSocket pipeline streaming order tickets from POS to kitchen stations with course pacing, modifiers, item-level status updates, and ticket bumping.",
+      },
+      {
+        title: "Live Shift Costing & Rota Management",
+        description: "Calculates precise gross-to-net labor costs on POS clock-in/out and rota shifts, giving operators live labor-to-sales ratios without waiting for monthly bureau reports or hitting third-party API rate limits.",
+      },
+      {
+        title: "Multi-Tenant SaaS with Stripe Billing",
+        description: "Strict database-level tenant isolation with Prisma ORM, tiered subscription gating (Basic, Pro, Enterprise) via Stripe webhooks, and automatic CSV/Excel accounting exports.",
+      },
+    ],
+    technicalHighlights: [
+      "Engineered an in-house UK tax calculation engine achieving 100% compliance across all 73 official HMRC 2026/27 Oracle benchmark test suites.",
+      "Implemented penny-exact integer and fixed-precision decimal arithmetic to eliminate floating-point rounding discrepancies on cumulative PAYE tax bands.",
+      "Architected a real-time event pipeline using WebSockets for instantaneous order routing between cash registers and kitchen display monitors.",
+      "Designed multi-tenant schema isolation in PostgreSQL with Prisma ORM, enforcing strict business tenant scoping across all transactions and HR records.",
+      "Built offline sync queue capabilities in IndexedDB ensuring uninterrupted cashier operations during temporary network drops.",
+    ],
+    architecture: {
+      designPatterns: [
+        "Domain-Driven Design",
+        "Pipeline Architecture",
+        "Event-Driven Architecture",
+        "Repository Pattern",
+        "Declarative Entitlement Guards",
+      ],
+      keyComponents: [
+        "HMRC Statutory Tax & Deductions Engine",
+        "POS Cashier & Checkout Pipeline",
+        "WebSocket KDS Dispatcher",
+        "Time & Attendance Tracking Engine",
+        "Stripe Subscription & Entitlements Guard",
+      ],
+      scalabilityFeatures: [
+        "Sub-millisecond in-memory statutory tax computation eliminating third-party API dependencies",
+        "Optimistic UI updates with offline transaction queuing for zero cashier downtime",
+        "Stateless containerized backend architecture supporting horizontal auto-scaling",
+        "Database connection pooling and indexed queries across multi-tenant partitions",
+      ],
+    },
+    challenges: [
+      "Reverse-engineering and matching HMRC's intricate statutory rules: handling cumulative tax weeks vs. non-cumulative Week 1/Month 1 basis, Scottish starter/basic/intermediate/higher/advanced/top bands, Welsh differentials, Director NI standard vs. cumulative alternative methods, and penny rounding conventions. Solution: built an automated test harness that ingests HMRC's official oracle spreadsheets and validates calculations against all 73 test cases with 0 discrepancies.",
+      "Real-time labor costing: calculating accurate shift cost previews on the POS terminal without hammering external payroll APIs or introducing latency to cashier operations. Solution: local execution within the core application engine, running gross-to-net calculations in under 2ms per employee.",
+    ],
+    results: [
+      "**100% HMRC Oracle Compliance**: All 73 official benchmark test suites passed with 0 discrepancies.",
+      "**Sub-50ms Transaction Processing**: Lightning-fast register operations capable of high-volume peak hospitality hours.",
+      "**Zero API Payroll Overhead**: Eliminated third-party payroll bureau fees (~£1–£2/employee/month) and costly onboarding setup fees.",
+      "**Enterprise Reliability**: Seamless multi-location and multi-tenant capabilities built for restaurant and retail scale.",
+    ],
+    codeSamples: [
+      {
+        title: "HMRC-Verified PAYE Cumulative Tax Calculation",
+        description: "Handles tax codes, cumulative allowance allocation, and tax band thresholds for UK, Scottish, and Welsh payroll.",
+        code: `// UK Statutory PAYE Tax Calculation Service (Tax Year 2026/2027)
+export class UKTaxCalculationService {
+  private readonly PERSONAL_ALLOWANCE = 12570;
+  private readonly BASIC_RATE_THRESHOLD = 50270;
+  private readonly HIGHER_RATE_THRESHOLD = 125140;
+
+  calculateIncomeTax(
+    grossPay: number,
+    taxCode: string,
+    payFrequency: 'WEEKLY' | 'FORTNIGHTLY' | 'MONTHLY' | 'ANNUALLY',
+    ytdGrossPay: number = 0,
+    ytdTax: number = 0,
+    options: TaxCalculationOptions = {}
+  ): number {
+    const code = taxCode.toUpperCase().trim();
+    const periodNumber = options.periodNumber || 1;
+    const periodsInYear = this.getPeriodsInYear(payFrequency);
+
+    // Cumulative allowance allocation
+    const cumulativeAllowance = (this.PERSONAL_ALLOWANCE / periodsInYear) * periodNumber;
+    const cumulativeGross = ytdGrossPay + grossPay;
+    const cumulativeTaxable = Math.max(0, cumulativeGross - cumulativeAllowance);
+
+    // Compute cumulative tax across statutory bands
+    const totalTaxDue = this.computeBandTax(cumulativeTaxable, periodNumber, periodsInYear);
+    const periodTax = Math.max(0, totalTaxDue - ytdTax);
+
+    return Math.round(periodTax * 100) / 100;
+  }
+}`,
+      },
+      {
+        title: "Declarative Feature Entitlement Guard",
+        description: "Enforces multi-tenant RBAC and subscription tier limits before executing business logic.",
+        code: `export const generateBulkPayslips = createAuthenticatedHandler({
+  features: ['payroll'],
+  roles: ['OWNER', 'MANAGER'],
+  schema: GeneratePayslipsSchema,
+  handler: async ({ input, businessId, prisma: tx }) => {
+    // Verified tenant isolation and active subscription tier
+    return await payrollService.generatePayslips(input, businessId, tx);
+  },
+  successStatus: 201,
+  successMessage: 'Payslips generated successfully',
+});`,
+      },
+    ],
+    role: "Founder, Full-Stack Architect & Core Engineer",
+    roleDescription:
+      "Designed and developed the full Peiqo platform, from POS terminal UI and real-time WebSocket KDS to the HMRC-tested UK payroll engine, database schema, and Stripe billing infrastructure.",
+  },
+
   {
     id: "2",
     title: "OnRoute",
