@@ -119,13 +119,13 @@ export const allProjects: Project[] = [
     roleDescription: "Designed the core philosophy and implemented the framework's pipeline architecture, type system, and security mechanisms.",
   },
 
-        {
+          {
     id: "1",
     title: "Peiqo",
     description:
-      "A multi-tenant retail POS and business management platform bringing together offline-first point-of-sale operations, inventory management, sales tracking, business administration, and online storefront capabilities.",
+      "A multi-tenant retail POS and business management platform unifying offline-first point-of-sale operations, inventory management, sales tracking, statutory UK payroll, and VAT accounting into a single operational system.",
     imageUrl: "/projects/peiqo.png",
-    imageAlt: "Peiqo — Building a Modern Retail Management Platform",
+    imageAlt: "Peiqo — Multi-tenant Retail POS, Business Management & Statutory Accounting Platform",
     technologies: [
       "Node.js",
       "TypeScript",
@@ -143,77 +143,91 @@ export const allProjects: Project[] = [
     galleryImages: [
       "/projects/peiqo.png",
     ],
-    overview: `Peiqo is a retail management platform designed to help independent retailers and growing businesses manage their day-to-day operations from a single system.
+    overview: `Peiqo is a retail and business management platform designed to help independent retailers and growing businesses manage their day-to-day operations from a single unified system.
 
-The platform brings together point-of-sale operations, inventory management, sales tracking, business administration, and online storefront capabilities.
+The platform brings together point-of-sale operations, inventory management, sales tracking, staff scheduling, statutory payroll, VAT accounting, business administration, and online storefront capabilities.
 
-The goal was to build more than a traditional POS system: a flexible, multi-tenant platform that could support different businesses, locations, and operational workflows without compromising usability or reliability.
+The goal was to build more than a traditional checkout tool: an integrated, multi-tenant operational platform that connects front-of-house sales directly with back-office administration, labor costing, and statutory accounting without relying on disconnected external tools.
+
+THE CHALLENGE
+Many independent retailers and hospitality operators rely on a patchwork of disconnected software: a standalone POS register, separate spreadsheets for rota scheduling, manual payroll processing, and disconnected accounting tools for VAT calculations.
+
+This creates operational friction, redundant data entry, inconsistent records, and delayed visibility into actual business margins.
+
+Peiqo was engineered to address several key challenges:
+• Supporting multiple independent businesses within one platform while maintaining strict tenant and location-level data isolation.
+• Unifying point-of-sale checkout and administrative management within a single cohesive application environment rather than fragmented tools.
+• Supporting retail transactions even when internet connectivity is unreliable, ensuring offline persistence and seamless synchronization.
+• Calculating statutory UK payroll (PAYE, National Insurance, pension contributions, and statutory sick pay) directly from employee work entries and shifts without external bureau fees or latency.
+• Tracking transaction-level VAT to automate UK VAT accounting and return generation alongside sales and expense workflows.
+• Keeping inventory, sales, and employee data consistent across physical store operations and online storefront channels.
+• Enforcing role-based permissions and audit logging across cashiers, managers, and business owners.
 
 THE ENGINEERING APPROACH
-I approached Peiqo as a modular SaaS platform, separating its major interfaces while maintaining a shared backend and business logic.
+I approached Peiqo as a unified, modular SaaS platform where commercial transactions, workforce management, and compliance accounting operate on a shared data model and business logic.
 
-1. Multi-tenant architecture
-Designed the platform around business-level tenancy, allowing multiple businesses to operate independently on the same infrastructure.
-• Tenant-aware data access
-• Business and location-level context
-• Role-based access control
-• Authentication and authorization
-• Audit trails for important operations
+1. Multi-Tenant Architecture & Data Isolation
+Designed the platform around business-level tenancy, allowing multiple businesses to operate securely on shared infrastructure.
+• Tenant-aware data access enforced from the database and authorization layers
+• Multi-location context allowing businesses to manage multiple stores or branches
+• Strict role-based access control (RBAC) governing cashier, manager, and owner permissions
+• Comprehensive audit trails for financial transactions, stock adjustments, and staff operations
 
-2. Offline-first point of sale
-One of the major engineering considerations was ensuring that retail operations could continue when internet connectivity became unreliable.
-The POS application was designed as a Progressive Web App with offline capabilities.
-• Local transaction handling
-• Offline data persistence
-• Transaction synchronization
-• Conflict management
-• Recovery from interrupted synchronization
+2. Integrated Offline-First Point of Sale
+Rather than building the POS as an isolated tool, it was integrated directly into the core platform with Progressive Web App (PWA) offline capabilities:
+• High-velocity checkout interface optimized for barcode scanning, split payments, multi-tender transactions, discounts, and cash drawer management
+• Local transaction handling and offline persistence ensuring sales continue during internet drops
+• Automated background synchronization and conflict resolution when connectivity is restored
+• Hardware integration with thermal receipt printers, barcode scanners, and cash drawers
 
-3. Multiple product interfaces
-Peiqo consists of distinct interfaces serving different operational needs:
-• Business Dashboard: A management interface for configuring and managing business operations, products, inventory, and sales.
-• Point of Sale: A dedicated interface optimized for checkout workflows, product scanning, transaction processing, and retail hardware integration.
-• Online Storefront: A customer-facing storefront built to allow businesses to establish their online presence and sell products beyond their physical locations.
+3. Statutory Payroll Engine
+A core architectural capability is calculating UK payroll directly within the platform:
+• Direct computation of UK PAYE income tax, Class 1 National Insurance, workplace pension auto-enrolment, and statutory sick pay (SSP)
+• Real-time gross-to-net shift labor costing calculated from employee time tracking and rota schedules
+• Deterministic payslip generation and automated export summaries (CSV and Excel) for business records
+• Direct generation of employee payslips and compliance files with zero external software dependency
 
-4. Retail hardware integration
-The POS experience was designed with physical retail environments in mind, including support considerations for:
-• Thermal receipt printers
-• Barcode scanners
-• Cash drawers
-• Customer-facing displays
+4. VAT Accounting & Financial Compliance
+To close the loop between daily sales and financial reporting, the platform integrates comprehensive UK VAT accounting:
+• Automatic VAT calculation and categorisation on retail transactions and expense records
+• Real-time tracking of output tax (sales) and input tax (purchases and expenses)
+• Automated VAT return calculations based on standard UK accounting periods
+• Export-ready reports designed for seamless record-keeping and accountant handoff
 
-5. Business operations and extensibility
-The platform was structured to accommodate additional business capabilities, including staff management, purchasing, expenses, payroll, and VAT-related workflows.
-The architectural direction prioritizes modularity so that business-specific capabilities can evolve without making the core platform unnecessarily complex.`,
+5. Unified Administration & Online Storefront
+The platform provides a centralized environment for business owners to oversee their entire operation:
+• Comprehensive inventory management with stock tracking, low-stock alerts, and variant handling
+• Customer-facing online storefront (Next.js) enabling businesses to sell products digitally while sharing inventory and orders with the physical store
+• Purchasing, expense tracking, and supplier management integrated into the general ledger`,
     keyFeatures: [
       {
-        title: "Multi-Tenant Architecture",
-        description: "Designed around business-level tenancy, allowing multiple businesses to operate independently on shared infrastructure with tenant-aware data access, location-level context, and role-based access control.",
+        title: "Integrated Offline-First Point of Sale",
+        description: "Built directly into the core platform with PWA offline persistence, barcode scanning, split tenders, hardware peripherals (receipt printers, cash drawers), and background synchronization.",
       },
       {
-        title: "Offline-First Point of Sale",
-        description: "Progressive Web App with local transaction handling, offline data persistence, transaction synchronization, conflict management, and recovery from interrupted sync.",
+        title: "Statutory UK Payroll Engine",
+        description: "Computes penny-exact PAYE income tax, Class 1 National Insurance, workplace pension auto-enrolment, and SSP directly from shift logs and time tracking with automated payslip generation.",
       },
       {
-        title: "Multiple Product Interfaces",
-        description: "Distinct interfaces tailored for operational needs: a Business Dashboard for administration and inventory, an optimized POS for checkout and scanning, and a customer-facing Online Storefront.",
+        title: "VAT Accounting & Financial Reporting",
+        description: "Tracks transaction-level sales and purchase taxes to automate UK VAT return calculations and compliance reporting alongside sales and expense workflows.",
       },
       {
-        title: "Retail Hardware Integration",
-        description: "Designed for physical retail environments with support considerations for thermal receipt printers, barcode scanners, cash drawers, and customer-facing displays.",
+        title: "Multi-Tenant Architecture & Data Isolation",
+        description: "Business-level tenancy allowing multiple retail businesses and store locations to operate securely on shared infrastructure with strict tenant-scoped queries and role-based permissions.",
       },
       {
-        title: "Business Operations & Extensibility",
-        description: "Modular foundation structured to accommodate additional business capabilities including staff management, purchasing, expenses, payroll, and VAT-related workflows.",
+        title: "Unified Administration & Online Storefront",
+        description: "Centralized inventory management, purchasing, and staff administration combined with a customer-facing Next.js storefront sharing unified stock and sales records.",
       },
     ],
     technicalHighlights: [
-      "Multi-tenant SaaS architecture with tenant-aware data access and location-level isolation.",
-      "Full-stack product engineering across Node.js, TypeScript, React, Next.js, and PostgreSQL.",
-      "Offline-first application design with local persistence, transaction synchronization, and conflict resolution.",
-      "Transaction-oriented backend development with Prisma ORM and PostgreSQL.",
-      "Separated product interfaces: Admin Dashboard (React + Vite), POS Application (React + Vite PWA), and Online Storefront (Next.js).",
-      "Deployment and infrastructure management using Docker and self-hosted infrastructure.",
+      "Multi-tenant SaaS architecture with strict tenant-aware data access and multi-location isolation.",
+      "Integrated offline-first POS designed as a Progressive Web App with local transaction persistence and sync recovery.",
+      "Native statutory UK payroll calculation engine computing PAYE, National Insurance, pensions, and SSP directly from shift records.",
+      "Transaction-level VAT accounting engine automating output/input tax tracking and UK VAT return generation.",
+      "Unified platform architecture pairing a React + Vite (PWA) admin/POS with a Next.js customer-facing storefront backed by a Node.js/TypeScript API.",
+      "Relational data modeling with PostgreSQL and Prisma ORM, Redis caching, and Docker container deployment.",
     ],
     architecture: {
       designPatterns: [
@@ -225,35 +239,36 @@ The architectural direction prioritizes modularity so that business-specific cap
       ],
       keyComponents: [
         "Backend Core API (Node.js & TypeScript)",
+        "Unified POS & Admin Dashboard (React + Vite PWA)",
+        "Online Storefront (Next.js)",
+        "Statutory Payroll & Tax Calculation Engine",
+        "VAT Accounting & Returns Pipeline",
         "Database & ORM (PostgreSQL & Prisma)",
         "Cache & Supporting Services (Redis)",
-        "Admin Dashboard (React + Vite)",
-        "POS Application (React + Vite PWA)",
-        "Online Storefront (Next.js)",
       ],
       scalabilityFeatures: [
-        "Offline-first instead of online-only: retail operations continue through internet instability",
-        "Separate applications for cashier, business owner, and online shopper to optimize each experience",
-        "Tenant isolation as an architectural concern considered from data and authorization layers",
-        "Modular business capabilities allowing retail workflows to evolve independently",
+        "Integrated single-platform architecture eliminating data synchronization lag between disconnected retail tools",
+        "Offline-first POS checkout ensuring transactions proceed uninterrupted regardless of broadband reliability",
+        "Native payroll and VAT calculations removing sync delays, latency, and recurring software fragmentation",
+        "Database-level multi-tenancy with strict tenant scoping across transactions, stock, and HR records",
       ],
     },
     challenges: [
-      "Many independent retailers rely on disconnected tools to manage sales, inventory, staff, and online orders, creating operational friction, inconsistent business data, and difficulties maintaining visibility across physical and digital sales channels.",
+      "Many independent retailers rely on disconnected tools for POS, rotas, payroll, and VAT accounting, causing operational friction, redundant data entry, and delayed visibility into actual business margins.",
+      "Unifying point-of-sale checkout and administrative management within a single cohesive application environment while supporting offline resilience when connectivity is unreliable.",
       "Supporting multiple independent businesses within one platform while maintaining strict tenant and location-level data isolation.",
-      "Supporting retail transactions even when internet connectivity is unreliable, ensuring transactions persist locally and synchronize automatically once connectivity is restored.",
-      "Keeping inventory and sales information consistent across physical checkout and online storefront interfaces.",
-      "Providing an online storefront alongside physical point-of-sale operations while supporting different staff roles and permissions within each business.",
+      "Calculating statutory UK payroll (PAYE, National Insurance, pension contributions) directly from employee work entries and shifts without external bureau fees or latency.",
+      "Tracking transaction-level VAT across sales and expenses to automate UK VAT accounting and return generation alongside daily operations.",
     ],
     results: [
-      "**Multi-Application Retail Platform**: Peiqo evolved into a multi-application retail SaaS platform covering business management, point-of-sale operations, and online commerce.",
-      "**Real-World Operational Resilience**: Offline-first POS ensures retail operations can proceed without depending on continuous internet stability.",
-      "**Architectural Tenant Isolation**: Strict multi-tenancy enforced from data and authorization layers rather than simple query identifiers.",
-      "**Comprehensive Product Engineering**: Substantial engineering across backend systems, frontend applications, offline synchronization, database design, and deployment infrastructure.",
+      "**Unified Retail Operating System**: Successfully integrated point-of-sale, inventory, staff scheduling, statutory payroll, VAT accounting, and online commerce into a single system.",
+      "**Real-World Operational Resilience**: Offline-first POS ensures retail checkouts proceed smoothly during temporary broadband drops with automatic sync recovery.",
+      "**Unified Financial Compliance**: Eliminated reliance on disconnected payroll services and external accounting tools through native PAYE, NI, and VAT accounting.",
+      "**Full-Stack Product Engineering**: Comprehensive delivery across backend APIs, offline synchronization, database design, hardware peripheral support, and self-hosted Docker infrastructure.",
     ],
     role: "Software Engineer",
     roleDescription:
-      "Product engineering across the backend, frontend applications, architecture, and infrastructure.",
+      "Full-stack product engineering across backend systems, web applications, statutory business logic, architecture, and infrastructure.",
   },
 
   {
